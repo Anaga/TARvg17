@@ -11,7 +11,12 @@ int main(int argc, char *argv[])
     QTextStream cin(stdin);
     QTextStream cout(stdout);
     qDebug() << "Hello TAR vg 17!" ; // Qt debug output to console
-    mainFunc();
+
+    while (mainFunc())
+    {
+         qDebug() << "while body";
+    }
+
 
 #if 0 // fast way to disable some code
     qDebug() << "Let's pull it!";
