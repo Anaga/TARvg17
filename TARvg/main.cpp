@@ -3,12 +3,22 @@
 #include <QTextStream>
 #include <QString>
 
+#include "swithgender.cpp"
+
 int main(int argc, char *argv[])
 {
     QCoreApplication ann(argc, argv);
     QTextStream cin(stdin);
     QTextStream cout(stdout);
     qDebug() << "Hello TAR vg 17!" ; // Qt debug output to console
+
+    while (mainFunc())
+    {
+         qDebug() << "while body";
+    }
+
+
+#if 0 // fast way to disable some code
     qDebug() << "Let's pull it!";
     int a, b;
     int n, m, l;
@@ -48,6 +58,7 @@ int main(int argc, char *argv[])
             if ((m<b) && (n<a)) qDebug() << "fits 2.2";
         }
     }
+#endif // End of code disabling
 
     return ann.exec();
 }
