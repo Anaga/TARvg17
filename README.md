@@ -1,4 +1,13 @@
 # TARvg17
-New repo for tthk.ee, to TARvg17
 
-Let's pull it!
+#class work 19.09.2018
+*main new topics*
+-Arrays
+-Write to files
+-Random
+
+*topic to practice*
+-Functions
+-Loops
+
+
