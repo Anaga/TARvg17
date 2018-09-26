@@ -2,6 +2,8 @@
 #include <QDateTime>
 #include <iostream>
 
+#define N_MAX 10
+
 enum DicesSet {
     WrongD,
     D4,
@@ -44,16 +46,41 @@ int rollDice(DicesSet d)
         return 0;
     }
     int value = randomBetween(1,max);
-    std::cout << "rollDice D"<<max<<" value "<< value <<"\n";
+    std::cout << "roll dice D"<<max<<" value "<< value <<"\n";
     return value;
 }
 
 int rollNTimes(int n, DicesSet d)
 {
     int summ = 0;
+    int val = 0;
     for(int i=0; i<n; i++){
-        summ+=rollDice(d);
+        val = rollDice(d);
+        summ+= val;
     }
+    float aver = summ/(static_cast<float>(n));
+    std::cout << "Average value is "<<aver<<" \n";
+    return summ;
+}
+
+int rollNTimesSaveToArr(int n, DicesSet d, int rollsArray[])
+{
+    int summ = 0;
+    int val = 0;
+
+    for(int i=0; i<n; i++){
+        val = rollDice(d);
+        summ+= val;
+        rollsArray[i] = val;
+    }
+    float aver = summ/(static_cast<float>(n));
+    std::cout << " Rolls array is : ";
+    for (int i=0; i<n; i++){
+        std::cout << rollsArray[i] << " ";
+    }
+    std::cout << " \n";
+
+    std::cout << "Average value is "<<aver<<" \n";
     return summ;
 }
 
@@ -61,7 +88,8 @@ void initRand()
 {
     qint64 mSec = QDateTime::currentMSecsSinceEpoch();
     //uint seed = (uint) mSec;
-    uint seed = 0x09262018;
+    uint seed = static_cast<uint>(mSec);
+    //uint seed = 0x09262018;
     std::cout << "mil sec from epoch() " << mSec << " seed from it " << seed << std::endl;
     qsrand(seed);
 }
@@ -74,16 +102,10 @@ int userInput()
     int dice = 0;
     std::cin >> dice;
 
-    DicesSet MyDice;
-    switch (dice) {
-        case 4 : MyDice = D4; break;
-        case 6 : MyDice = D6; break;
-        case 8 : MyDice = D8; break;
-    default: MyDice = WrongD; break;
-    }
+    DicesSet MyDice = intToDice(dice);
 
     if (MyDice==WrongD) {
-        std::cout << "Not support dice, exit\n";
+        std::cout << "Not supported dice, exit\n";
         return 0;
     }
 
@@ -91,9 +113,20 @@ int userInput()
     std::cout << "How many timese we shall roll D"<<dice<<" dice? \n";
     std::cin >> times;
 
+
     int summa = 0;
-    summa = rollNTimes(times, MyDice);
+    // summa = rollNTimes(times, MyDice);
+    // std::cout << "Summa is " << summa << " \n";
+
+    int oneRollsArray[N_MAX];
+    summa = rollNTimesSaveToArr(times, MyDice, oneRollsArray);
     std::cout << "Summa is " << summa << " \n";
+    std::cout << " Rolls array is : ";
+    for (int i=times; i>0; i--){
+        std::cout << oneRollsArray[i-1] << " ";
+    }
+
+    std::cout << " \n";
     return  summa;
 }
 
