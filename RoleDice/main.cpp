@@ -9,6 +9,27 @@ enum DicesSet {
     D8
 };
 
+DicesSet intToDice(int val)
+{
+    switch (val) {
+        case 4: return D4;
+        case 6: return D6;
+        case 8: return D8;
+    default: return WrongD;
+    }
+    return WrongD;
+}
+
+int diceToInt(DicesSet ds)
+{
+    switch (ds) {
+        case D4: return 4;
+        case D6: return 6;
+        case D8: return 8;
+    default: return 0;
+    }
+    return 0;
+}
 
 static int randomBetween(int low, int high)
 {
@@ -17,13 +38,10 @@ static int randomBetween(int low, int high)
 
 int rollDice(DicesSet d)
 {
-    int max = 1;
-
-    switch (d) {
-        case D4 : max = 4; break;
-        case D6 : max = 6; break;
-        case D8 : max = 8; break;
-    default: max = 1; break;
+    int max = diceToInt(d);
+    if (max==0){
+        std::cout << "Can't roll D zerro dice, exit\n";
+        return 0;
     }
     int value = randomBetween(1,max);
     std::cout << "rollDice D"<<max<<" value "<< value <<"\n";
