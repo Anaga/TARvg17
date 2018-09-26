@@ -32,6 +32,9 @@ int diceToInt(DicesSet ds)
         case D4: return 4;
         case D6: return 6;
         case D8: return 8;
+        case D10: return 10;
+        case D20: return 20;
+        case D100: return 100;
     default: return 0;
     }
     return 0;
@@ -66,6 +69,13 @@ int rollNTimes(int n, DicesSet d)
     std::cout << "Average value is "<<aver<<" \n";
     return summ;
 }
+int getMax(int AR[], int AR_size){ //function to get Maximum in Array
+    int max = AR[0];
+    for (int i=0; i<AR_size; i++){
+        if ( max<AR[i] ) max = AR[i];
+    }
+    return max;
+}
 
 int rollNTimesSaveToArr(int n, DicesSet d, int rollsArray[])
 {
@@ -85,14 +95,16 @@ int rollNTimesSaveToArr(int n, DicesSet d, int rollsArray[])
     std::cout << " \n";
 
     std::cout << "Average value is "<<aver<<" \n";
+
+    int maxValue;
+    maxValue = getMax(rollsArray,n);
+    std::cout << "Maximum value is "<<maxValue<<" \n";
     return summ;
 }
 void initRand()
 {
     qint64 mSec = QDateTime::currentMSecsSinceEpoch();
-    //uint seed = (uint) mSec;
-    //uint seed = static_cast<uint>(mSec);
-    uint seed = 0x09262018;
+    uint seed = static_cast<uint>(mSec);
     std::cout << "mil sec from epoch() " << mSec << " seed from it " << seed << std::endl;
     qsrand(seed);
 } int userInput();
@@ -101,7 +113,7 @@ void initRand()
 int rand8_13();
 int main()
 {
-    //initRand();
+    initRand();
     int N =6;
     int summ = 0;
     int rollArray[6];
@@ -109,19 +121,27 @@ int main()
     for (int i=0; i<N; i++){
         int val = rand8_13();
         summ+=  val;
-        rollArray[i] = val;
+        rollArray[i] = val; //Fill array with numbers from 8 till 13
     }
     float aver = (float)summ /N;
     std::cout << "aver is "<< aver << " summ" << summ << "\n";
 
+    std::cout << "We got this rolls: \n";
     for (int i=0; i<N; i++){
-        std::cout << "  " << rollArray[i] ;
+        std::cout << " " << rollArray[i] ;
     }
     std::cout << "\n backward \n";
     for (int j=5; j>=0; j--){
         std::cout << " " << rollArray[j];
     }
-    std::cout << "\n end \n";
+    std::cout << "\nend \n";
+
+    std::cout << "Now we roll D100 10 times: \n";
+    int rollD100X10Array[10];
+    rollNTimesSaveToArr(10,D100,rollD100X10Array);
+
+    std::cout << "Max val from function: " << getMax(rollD100X10Array,10);
+    std::cout << "\n";
 
     return 0;
 }
@@ -153,7 +173,6 @@ int userInput()
     std::cout << "How many timese we shall roll D"<<dice<<" dice? \n";
     std::cin >> times;
 
-
     int summa = 0;
     summa = rollNTimes(times, MyDice);
     std::cout << "Summa is " << summa << " \n";
@@ -169,17 +188,3 @@ int userInput()
     std::cout << " \n";
     return  summa;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
