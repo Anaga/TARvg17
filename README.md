@@ -56,20 +56,20 @@ examples:
     std::cout << "\n D10 rolls:";
     for (int i=0; i<5; i++) std::cout << " " << D10X5[i];
 
-    std::cout << "\n D20 rolls:";
+    std::cout << "\n\n D20 rolls:";
     for (int i=0; i<10; i++) std::cout << " " << D20X10[i];
 
     joinSortedArray(D10X5,5, D20X10,10, D10AndD20);
 
-    std::cout << "\n D10 + D20 rolls:";
+    std::cout << "\n\n D10 + D20 rolls:";
     for (int i=0; i<15; i++) std::cout << " " << D10AndD20[i];
 ```
 
 Output:
 > D10 rolls: 1 2 3 4 5
-
+> 
 > D20 rolls: 2 3 5 5 8 12 13 17 18 20
-
+> 
 > D10 + D20 rolls: 1 2 2 3 3 4 5 5 5 8 12 13 17 18 20
 
 
