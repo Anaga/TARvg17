@@ -115,17 +115,18 @@ int main()
     std::cout << "aver is "<< aver << " summ" << summ << "\n";
 
     for (int i=0; i<N; i++){
-        std::cout << "Roll "<< i << " value is " << rollArray[i] << "\n";
-
+        std::cout << "  " << rollArray[i] ;
     }
-    for (int j=5; j>=0; j++){
-        //std::cout << "Roll "<< j << " value is " << rollArray[j] << "\n";
+    std::cout << "\n backward \n";
+    for (int j=5; j>=0; j--){
+        std::cout << " " << rollArray[j];
     }
+    std::cout << "\n end \n";
 
     return 0;
 }
 
-int rand8_13(){
+int rand8_13(){ // functin shal return random number berween 8 and 13
     int val = qrand();
     int div = ((val % 5)) +8;
   std::cout << "divided value " <<div << "\n";
