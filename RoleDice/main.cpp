@@ -4,11 +4,15 @@
 
 #define N_MAX 10
 
-enum DicesSet {
+enum DicesSet {  // new data type - DicesSet
     WrongD,
     D4,
     D6,
-    D8
+    D8,
+    D10,
+    D12,
+    D20,
+    D100
 };
 
 DicesSet intToDice(int val)
@@ -83,16 +87,51 @@ int rollNTimesSaveToArr(int n, DicesSet d, int rollsArray[])
     std::cout << "Average value is "<<aver<<" \n";
     return summ;
 }
-
 void initRand()
 {
     qint64 mSec = QDateTime::currentMSecsSinceEpoch();
     //uint seed = (uint) mSec;
-    uint seed = static_cast<uint>(mSec);
-    //uint seed = 0x09262018;
+    //uint seed = static_cast<uint>(mSec);
+    uint seed = 0x09262018;
     std::cout << "mil sec from epoch() " << mSec << " seed from it " << seed << std::endl;
     qsrand(seed);
+} int userInput();
+
+
+int rand8_13();
+int main()
+{
+    //initRand();
+    int N =6;
+    int summ = 0;
+    int rollArray[6];
+
+    for (int i=0; i<N; i++){
+        int val = rand8_13();
+        summ+=  val;
+        rollArray[i] = val;
+    }
+    float aver = (float)summ /N;
+    std::cout << "aver is "<< aver << " summ" << summ << "\n";
+
+    for (int i=0; i<N; i++){
+        std::cout << "Roll "<< i << " value is " << rollArray[i] << "\n";
+
+    }
+    for (int j=5; j>=0; j++){
+        //std::cout << "Roll "<< j << " value is " << rollArray[j] << "\n";
+    }
+
+    return 0;
 }
+
+int rand8_13(){
+    int val = qrand();
+    int div = ((val % 5)) +8;
+  std::cout << "divided value " <<div << "\n";
+  return div;
+}
+
 
 int userInput()
 {
@@ -115,8 +154,8 @@ int userInput()
 
 
     int summa = 0;
-    // summa = rollNTimes(times, MyDice);
-    // std::cout << "Summa is " << summa << " \n";
+    summa = rollNTimes(times, MyDice);
+    std::cout << "Summa is " << summa << " \n";
 
     int oneRollsArray[N_MAX];
     summa = rollNTimesSaveToArr(times, MyDice, oneRollsArray);
@@ -130,13 +169,16 @@ int userInput()
     return  summa;
 }
 
-int main()
-{
-    initRand();
-    int summa = 0;
-    do {
-      summa = userInput();
-    } while (summa!=0);
 
-    return 0;
-}
+
+
+
+
+
+
+
+
+
+
+
+
