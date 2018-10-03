@@ -1,5 +1,8 @@
 #include <QCoreApplication>
 #include <QDebug>
+#include <QFile>
+#include <QTextStream>
+#include <QString>
 #include <iostream>
 using namespace std;
 
@@ -11,7 +14,7 @@ struct Points{
     Color col;
 };
 
-void printPoint(Points a);
+QString printPoint(Points a);
 int main(int argc, char *argv[])
 {
     Points p1;
@@ -25,6 +28,37 @@ int main(int argc, char *argv[])
     p2.y = 8;
     p2.col = Green;
 
+    Points PArr[4];
+
+    PArr[0].x=0;
+    PArr[0].y=0;
+
+    PArr[1].x=5;
+    PArr[1].y=0;
+
+    PArr[2].x=5;
+    PArr[2].y=5;
+
+    PArr[3].x=0;
+    PArr[3].y=5;
+
+    // Total
+
+    QFile qf("PointList.txt");
+    if (qf.open(QFile::WriteOnly | QFile::Truncate)) {
+          QTextStream out(&qf);
+          out << "Hello \n" ;
+
+          for (int i=0; i<4; i++) {
+              out << printPoint(PArr[i]);
+              out << endl;
+          }
+      }
+
+
+
+
+
     printPoint(p1);
     printPoint(p2);
 
@@ -32,8 +66,10 @@ int main(int argc, char *argv[])
 
     return a.exec();
 }
-void printPoint(Points a){
+QString printPoint(Points a){
+    QString qsTemp = "Point [%1;%2] \n";
     cout << "Point ["<< a.x << ";"<< a.y<< "] " ;
+    qsTemp = qsTemp.arg(a.x).arg(a.y);
     Color c = a.col;
     switch (c) {
     case Red: cout << "Red"; break;
@@ -42,4 +78,5 @@ void printPoint(Points a){
     default:cout << "Error"; break;
     }
     cout << endl;
+    return qsTemp;
 }
