@@ -30,6 +30,8 @@ int main()
         OneDArrayB[i] = (i-127)*20;
     }
     printOneDemArr(OneDArrayB, B_SIZE);
+
+
     int TwoDArrayA[2][3] = { {1,2,3},
                              {6,7,8} };
 
@@ -43,6 +45,7 @@ int main()
 
               //rows (25)  col (15)
     int TwoDArrayB[A_SIZE][B_SIZE] = {0};
+    //print out array context
     for (int i=0; i<A_SIZE; i++){
         for (int j=0; j<B_SIZE; j++){
             cout << TwoDArrayB[i][j] << ", ";
@@ -51,10 +54,12 @@ int main()
     }
     cout << "---------------------" <<endl;
 
+    // modify TwoDArrayB and set up "1" on main diagonal
     for (int i=0; i<B_SIZE; i++){
         TwoDArrayB[i][i] = 1;
     }
 
+    //print out array context
     for (int i=0; i<A_SIZE; i++){ // Rows
         for (int j=0; j<B_SIZE; j++){ // Colums
             cout << TwoDArrayB[i][j] << ", ";
@@ -62,7 +67,6 @@ int main()
         cout << endl;
     }
     cout << "---------------------" <<endl;
-
 
     return 0;
 }

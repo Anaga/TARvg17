@@ -1,5 +1,55 @@
 # TARvg17
 
+# 2DArr
+## app for class work 03.10.2018
+Arrays in C++, one dimensional and two dimensional arrays
+
+# Pointys
+## app for class work 03.10.2018
+Structurs, on Point example:
+
+```javascript
+enum Color{ Red, Green, Blue };
+
+struct Points{
+    int x;
+    int y;
+    Color col;
+};
+```
+
+function to print one point to std and to QString
+```javascript
+QString printPoint(Points a){
+    QString qsTemp = "Point [%1;%2] \n";
+    cout << "Point ["<< a.x << ";"<< a.y<< "] " ;
+    qsTemp = qsTemp.arg(a.x).arg(a.y);
+    Color c = a.col;
+    switch (c) {
+    case Red: cout << "Red"; break;
+    case Green: cout << "Green"; break;
+    case Blue: cout << "Blue"; break;
+    default:cout << "Error"; break;
+    }
+    cout << endl;
+    return qsTemp;
+}
+```
+
+and a part to made new text file and print point to file:
+```javascript
+    QFile qf("PointList.txt");
+    if (qf.open(QFile::WriteOnly | QFile::Truncate)) {
+          QTextStream out(&qf);
+          out << "Hello \n" ;
+
+          for (int i=0; i<4; i++) {
+              out << printPoint(PArr[i]);
+              out << endl;
+          }
+      }
+```
+
 
 # Role Dice 
 ## app for class work 26.09.2018

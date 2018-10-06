@@ -14,16 +14,20 @@ struct Points{
     Color col;
 };
 
-QString printPoint(Points a);
-int main(int argc, char *argv[])
+// function header to print out one point to cout
+QString printPoint(Points a); // and also to QString
+
+int main()
 {
-    Points p1;
+    Points p1; // define 2 ponts
     Points p2;
 
+    // give some value to P1
     p1.x = 10;
     p1.y = 0;
     p1.col = Red;
 
+    // and to P2
     p2.x = 3;
     p2.y = 8;
     p2.col = Green;
@@ -56,15 +60,10 @@ int main(int argc, char *argv[])
       }
 
 
-
-
-
     printPoint(p1);
     printPoint(p2);
 
-    QCoreApplication a(argc, argv);
-
-    return a.exec();
+    return 0;
 }
 QString printPoint(Points a){
     QString qsTemp = "Point [%1;%2] \n";
