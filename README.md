@@ -70,6 +70,39 @@ float area(Point Array[4]);  // return area using Gauss's area formula or use Ge
 
  но будут еще.
 
+Try this points:
+```javascript
+    Point E={-10.0,-10.0,'E'};
+    Point F={ 10.0,-10.0,'F'};
+    Point G={ 10.0, 10.0,'G'};
+    Point H={-10.0, 10.0,'H'};
+    Point QE[4]={E, F, G, H};
+    qDebug() << printQuad(QE);
+    perim = perimeter(QE);
+    ar = area(QE);
+    qsRetVal = "Have perimeter %1 and area %2";
+    qsRetVal = qsRetVal.arg(perim,0,'f',2).arg(ar,0,'f',3);
+    qDebug() << qsRetVal;
+
+    Point A={-9.0,-5.8,'a'};
+    Point B={-6.2,9.1,'b'};
+    Point C={-8.4,6.8,'c'};
+    Point D={-2.9,-0.3,'d'};
+
+    Point Q1[4]={A, B, C, D};
+    qDebug() << printQuad(Q1);
+    perim = perimeter(Q1);
+    ar = area(Q1);
+    qsRetVal = "Have perimeter %1 and area %2";
+    qsRetVal = qsRetVal.arg(perim,0,'f',2).arg(ar,0,'f',3);
+    qDebug() << qsRetVal;
+```
+Результаты вычислений будет:
+
+> "Quadrilateral with points: E[-10;-10] F[10;-10] G[10;10] H[-10;10] "
+> "Have perimeter 80.00 and area 400.000"
+> "Quadrilateral with points: a[-9;-5.8] b[-6.2;9.1] c[-8.4;6.8] d[-2.9;-0.3] "
+> "Have perimeter 35.54 and area 23.610"
 
 # 2DArr
 ## app for class work 03.10.2018
