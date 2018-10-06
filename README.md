@@ -1,5 +1,67 @@
 # TARvg17
 
+### Homework - Perimeter and Area of quadrilateral by 4 Points
+Найти периметр и площадь четырехугольника на основе 4х Точек
+
+```javascript
+```
+У нас есть структура Точка - координаты точки и ее имя
+
+```javascript
+struct Point{
+    float x;
+    float y;
+    char Name;
+};
+```
+
+Точеки обеденыне по 4 в массив
+```javascript
+    Point quadOne[4];
+    
+    quadOne[0].Name='A';
+    quadOne[0].x=0.0;
+    quadOne[0].y=0.0;
+    
+    quadOne[1].Name='B';
+    quadOne[1].x=4.0;
+    quadOne[1].y=0.0;
+    
+    quadOne[2].Name='C';
+    quadOne[2].x=4.0;
+    quadOne[2].y=4.0;
+    
+    quadOne[3].Name='D';
+    quadOne[3].x=0.0;
+    quadOne[3].y=4.0;
+```
+
+написать тела функций:
+```javascript
+float distance(Point A, Point B); // return distance between point A and B (use Pifagor's Theorem)
+float perimeter(Point Array[4]); // return distance perimeter  usind function 'distance' 4 times
+float area(Point Array[4]);  // return area using Gauss's area formula or use Geron formaula for two triangles ABC + ACD
+```
+
+Первая - возвращяет растояние между двумя точками по формуле sqrt( (A.x-B.x)*(A.x-B.x) + (A.y-B.y)*(A.y-B.y) )
+Вторая - находит перимирет как сумму 4х отрезков: (AB + BC + CD + DA)
+Третия - находит площадь четырехугольника по точками используя формулу Гауса, или же, делит четырехугольник на 2 треугольника, 
+и находит его площадь как сумму 2х треугольников - ABC + ACD
+площадь треугольников, зная длины сторон, можно найти по формуле Герона.
+
+Результаты вычислений записать в текстовый файл, вывод такой:
+
+> "Quadrilateral with points: A[0;0] B[4;0] C[4;4] B[0;4] "
+> "Have perimeter 16.00 and area 16.000"
+> 
+> "Quadrilateral with points: E[-10;-10] F[10;-10] G[10;10] H[-10;10] "
+> "Have perimeter 80.00 and area 400.00"
+
+первые точки для проверки - A[0;0] B[4;0] C[4;4] B[0;4] и  E[-10;-10] F[10;-10] G[10;10] H[-10;10] 
+
+но будут еще.
+
+
 # 2DArr
 ## app for class work 03.10.2018
 Arrays in C++, one dimensional and two dimensional arrays
