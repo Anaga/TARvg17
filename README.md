@@ -43,18 +43,18 @@ float perimeter(Point Array[4]); // return distance perimeter  usind function 'd
 float area(Point Array[4]);  // return area using Gauss's area formula or use Geron formaula for two triangles ABC + ACD
 ```
 
-Первая - возвращяет растояние между двумя точками по формуле sqrt( (A.x-B.x)*(A.x-B.x) + (A.y-B.y)*(A.y-B.y) ) 
-Вторая - находит периметр как сумму 4х отрезков: (AB + BC + CD + DA) 
-Третия - находит площадь четырехугольника по точками используя формулу Гауса, или же, делит четырехугольник на 2 треугольника,  
-и находит его площадь как сумму 2х треугольников - ABC + ACD 
-площадь треугольников, зная длины сторон, можно найти по формуле Герона. 
+* Первая - возвращяет растояние между двумя точками по формуле sqrt( (A.x-B.x)*(A.x-B.x) + (A.y-B.y)*(A.y-B.y) ) 
+* Вторая - находит периметр как сумму 4х отрезков: (AB + BC + CD + DA) 
+* Третия - находит площадь четырехугольника по точками используя формулу Гауса, или же, делит четырехугольник на 2 треугольника,  
+ и находит его площадь как сумму 2х треугольников - ABC + ACD 
+ площадь треугольников, зная длины сторон, можно найти по формуле Герона. 
 
 Ссылки: 
-[Gaus formula](https://en.wikipedia.org/wiki/Shoelace_formula) 
-[Формулa Гауса] (https://ru.wikipedia.org/wiki/%D0%A4%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0_%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D0%B8_%D0%93%D0%B0%D1%83%D1%81%D1%81%D0%B0)
-
-[Heron formula](https://en.wikipedia.org/wiki/Heron%27s_formula) 
-[Формулa Герона](https://ru.wikipedia.org/wiki/%D0%A4%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0_%D0%93%D0%B5%D1%80%D0%BE%D0%BD%D0%B0)
+* [Gaus formula](https://en.wikipedia.org/wiki/Shoelace_formula) 
+* [Формулa Гауса] (https://ru.wikipedia.org/wiki/%D0%A4%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0_%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D0%B8_%D0%93%D0%B0%D1%83%D1%81%D1%81%D0%B0)
+* 
+* [Heron formula](https://en.wikipedia.org/wiki/Heron%27s_formula) 
+* [Формулa Герона](https://ru.wikipedia.org/wiki/%D0%A4%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0_%D0%93%D0%B5%D1%80%D0%BE%D0%BD%D0%B0)
 
 Результаты вычислений записать в текстовый файл, вывод такой:
 
