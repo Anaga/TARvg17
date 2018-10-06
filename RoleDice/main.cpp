@@ -101,6 +101,14 @@ int rollNTimesSaveToArr(int n, DicesSet d, int rollsArray[])
     std::cout << "Maximum value is "<<maxValue<<" \n";
     return summ;
 }
+
+int joinSortedArray(int arrA[], int arrA_size, int arrB[], int arrB_size, int arrC[]){
+    int i, j;
+    for (i=0; i<arrA_size; i++) arrC[i]=arrA[i];
+    for (j=0; j<arrB_size; j++) arrC[i+j]=arrB[j];
+    return i+j;
+}
+
 void initRand()
 {
     qint64 mSec = QDateTime::currentMSecsSinceEpoch();
@@ -142,6 +150,33 @@ int main()
 
     std::cout << "Max val from function: " << getMax(rollD100X10Array,10);
     std::cout << "\n";
+
+    int rollD100X5Array[5];
+    int rollD100X15Array[15];
+    rollNTimesSaveToArr(5,D100,rollD100X5Array);
+    int X15 = joinSortedArray(rollD100X10Array, 10, rollD100X5Array, 5, rollD100X15Array);
+    for (int i=0; i<X15; i++){
+        std::cout << " " << rollD100X15Array[i] ;
+    }
+
+    int D10X5[5] = {1,2,3,4,5};
+    int D20X10[10] = {2,3,5,5,8,12,13,17,18,20};;
+    int D10AndD20[20];
+
+    std::cout << "\n D10 rolls:";
+    for (int i=0; i<5; i++) std::cout << " " << D10X5[i];
+
+    std::cout << "\n D20 rolls:";
+    for (int i=0; i<10; i++) std::cout << " " << D20X10[i];
+
+    joinSortedArray(D10X5,5, D20X10,10, D10AndD20);
+
+    std::cout << "\n D10 + D20 rolls:";
+    for (int i=0; i<15; i++) std::cout << " " << D10AndD20[i];
+
+
+
+
 
     return 0;
 }
