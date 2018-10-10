@@ -19,7 +19,7 @@ item ParseOneRow(QString row);
 int main()
 {
     QString message;
-    QString qsFileName = "Bills ListUTF8BOM.txt";
+    QString qsFileName = "61550R4.txt";
 
     QFile file(qsFileName);
     if (!file.exists()){
@@ -36,34 +36,49 @@ int main()
         return -1;
     }
 
-    QTextStream in(&file);
-    in.setAutoDetectUnicode(true);
-    in.setCodec("UTF-8");
+    QTextStream inputConsole(&file);
+    inputConsole.setAutoDetectUnicode(true);
+    inputConsole.setCodec("UTF-8");
 
     system("chcp 65001");
 
     item AllItems[20];
 
-    QString oneLine = in.readLine();
-    QString qsTemp = "%1 : %2 \n";
+    QString oneLine = inputConsole.readLine();
+    QString qsTemp = "A:%1 P:%2 W:%3 SUMMA%4 \n";
     int i=0;
     int N=0;
-    while (oneLine!= nullptr) {
+    float amount, price, weight, summa, total=0;
+    QString qsDesc;
+    while (!inputConsole.atEnd()) {
         i++;
-        //qsTemp=qsTemp.arg(i,3,10, QChar(' ')).arg(oneLine);
-        //cout << qUtf8Printable(qsTemp);
-        cout << qUtf8Printable(oneLine) << endl;
+        if (i<2) {
+            cout << qUtf8Printable(oneLine) << endl;
+            oneLine = inputConsole.readLine();
+        } else {
+        inputConsole >> amount;
+        inputConsole >> price;
+        inputConsole >> weight;
+        qsDesc = inputConsole.readLine();
+        summa = price*amount;
+        total = total + summa;
 
-        /*
+        qsTemp = "A:%1 P:%2 W:%3 SUMMA:%4 D:%5 \n";
+        qsTemp=qsTemp.arg(amount).arg(price).arg(weight).arg(summa).arg(qsDesc);
+        //cout <<"A: " <<amount  << "  P: "<< price << weight << qUtf8Printable(qsDesc);
+        cout << qUtf8Printable(qsTemp);
+        }
+
+
+        /*if (i>3) break;
         if (oneLine.contains('.')) {
             AllItems[N]= ParseOneRow(oneLine);
             N++;
-        }*/
-
-        oneLine = in.readLine();
-        qsTemp = "%1 : %2 \n";
+        }
+        qsTemp = "%1 : %2 \n";*/
     }
     file.close();
+    cout <<"Total summa is : " <<total << endl;
 
     item CI; // Current item
     for (i=0; i<N; i++){
