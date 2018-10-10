@@ -50,13 +50,16 @@ int main()
     int N=0;
     while (oneLine!= nullptr) {
         i++;
-        qsTemp=qsTemp.arg(i,3,10, QChar(' ')).arg(oneLine);
-        cout << qUtf8Printable(qsTemp);
+        //qsTemp=qsTemp.arg(i,3,10, QChar(' ')).arg(oneLine);
+        //cout << qUtf8Printable(qsTemp);
+        cout << qUtf8Printable(oneLine) << endl;
 
+        /*
         if (oneLine.contains('.')) {
             AllItems[N]= ParseOneRow(oneLine);
             N++;
-        }
+        }*/
+
         oneLine = in.readLine();
         qsTemp = "%1 : %2 \n";
     }

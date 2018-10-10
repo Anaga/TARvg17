@@ -1,0 +1,4 @@
+Bill ID: 61550R4
+Amount  Price   Weight  Description
+1.000   4.99    0.624   Alumiiniumist non-stick pann, 24 cm, tk
+1.000   1.65    0.172   Krõpsud Pringles, 165 g

@@ -1,0 +1,5 @@
+Bill ID: 61549R3
+Amount  Price   Weight  Description
+0.832   6.29    0.832   Tudish pitsa, kg
+0.250   5.96    0.250   Kikerherne-kinoasalat, 250 g
+1.000   0.69    1.550   Jook Vichy Fresh, 1,5 l
