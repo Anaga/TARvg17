@@ -1,0 +1,20 @@
+Bills list
+
+Bill ID: 61548R2
+Amount  Price   Weight  Description
+1.433   1.49    1.433   Pomel, kg
+2.000   0.39    0.043   Glasuurkohuke Tere, 43 g
+1.000   0.95    0.095   Šokolaad Kalev, 95 g
+1.654   3.69    1.654   Sea kaelakarbonaad kondita, kg
+1.000   1.39    2.320   Täispiim Farmi, 3,8-4,2%, 2 l
+
+Bill ID: 61549R3
+Amount  Price   Weight  Description
+0.832   6.29    0.832   Tudish pitsa, kg
+0.250   5.96    0.250   Kikerherne-kinoasalat, 250 g
+1.000   0.69    1.550   Jook Vichy Fresh, 1,5 l
+
+Bill ID: 61550R4
+Amount  Price   Weight  Description
+1.000   4.99    0.624   Alumiiniumist non-stick pann, 24 cm, tk
+1.000   1.65    0.172   Krõpsud Pringles, 165 g
