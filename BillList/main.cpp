@@ -20,6 +20,8 @@ int main()
 {
     QString message;
     QString qsFileName = "61550R4.txt";
+    qsFileName = "61550R4.txt";
+    qsFileName = "61548R2.txt";
 
     QFile file(qsFileName);
     if (!file.exists()){
