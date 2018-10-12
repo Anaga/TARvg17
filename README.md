@@ -22,13 +22,15 @@ Example:
 Read from text file using QFile and QTextStream, set console local by \* system("chcp 65001"); \* to printout Estoniand and Russian characters  
 Read one bill from chop and calculate total summ of bill.  
 
-Example:
-`Bill ID: 61550R4`
-`Amount  Price   Weight  Description`
-`1.000   4.99    0.624   Alumiiniumist non-stick pann, 24 cm, tk`
-`1.000   1.65    0.172   Krõpsud Pringles, 165 g`
 
-To parse input text file we use QTextStream inputConsole
+Example:
+
+> Bill ID: 61550R4   
+> Amount  Price   Weight  Description   
+> 1.000   4.99    0.624   Alumiiniumist non-stick pann, 24 cm, tk   
+> 1.000   1.65    0.172   Krõpsud Pringles, 165 g   
+
+To parse input text file we use QTextStream inputConsole  
 ```javascript
 inputConsole >> amount;
 inputConsole >> price;
@@ -43,10 +45,10 @@ qsDesc = inputConsole.readLine();
 Read points coordinates from text file using QFile and QStringList to split one row to X and to Y.
 
 Example:
-`-9.0;-5.8`
-`-6.2;9.1`
-`-8.4;6.8`
-`-2.9;-0.3`
+> -9.0;-5.8
+> -6.2;9.1
+> -8.4;6.8
+> -2.9;-0.3
 
 
 To parse input text file we use char buf[1024] for one line
@@ -125,30 +127,29 @@ float area(Point Array[4]);  // return area using Gauss's area formula or use Ge
 
 * Первая - возвращяет растояние между двумя точками по формуле sqrt((A.x-B.x)*(A.x-B.x) + (A.y-B.y)*(A.y-B.y)) 
 * Вторая - находит периметр как сумму 4х отрезков: (AB + BC + CD + DA) 
-* Третия - находит площадь четырехугольника по точками используя формулу Гауса, или же, 
- делить четырехугольник на 2 треугольника, и находит его площадь как сумму 
- 2х треугольников - ABC + ACD 
+* Третия - находит площадь четырехугольника по точками используя формулу Гауса, или же,   
+ делить четырехугольник на 2 треугольника, и находит его площадь как сумму   
+ 2х треугольников - ABC + ACD   
  площадь треугольников, зная длины сторон, можно найти по формуле Герона. 
 
 Ссылки: 
-* [Gaus formula](https://en.wikipedia.org/wiki/Shoelace_formula) 
+* [Gaus formula](https://en.wikipedia.org/wiki/Shoelace_formula)   
 * [Формулa Гауса](https://ru.wikipedia.org/wiki/%D0%A4%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0_%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D0%B8_%D0%93%D0%B0%D1%83%D1%81%D1%81%D0%B0)
 * 
-* [Heron formula](https://en.wikipedia.org/wiki/Heron%27s_formula) 
+* [Heron formula](https://en.wikipedia.org/wiki/Heron%27s_formula)   
 * [Формулa Герона](https://ru.wikipedia.org/wiki/%D0%A4%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0_%D0%93%D0%B5%D1%80%D0%BE%D0%BD%D0%B0)
 
 Результаты вычислений записать в текстовый файл, вывод такой:
 
-> "Quadrilateral with points: A[0;0] B[4;0] C[4;4] B[0;4] " 
-> "Have perimeter 16.00 and area 16.000" 
+> "Quadrilateral with points: A[0;0] B[4;0] C[4;4] B[0;4] "   
+> "Have perimeter 16.00 and area 16.000"    
 >  
-> "Quadrilateral with points: E[-10;-10] F[10;-10] G[10;10] H[-10;10] " 
-> "Have perimeter 80.00 and area 400.00" 
+> "Quadrilateral with points: E[-10;-10] F[10;-10] G[10;10] H[-10;10] "    
+> "Have perimeter 80.00 and area 400.00"    
 
 
- первые точки для проверки - A[0;0] B[4;0] C[4;4] B[0;4] и  E[-10;-10] F[10;-10] G[10;10] H[-10;10]  
+ первые точки для проверки - A[0;0] B[4;0] C[4;4] B[0;4] и  E[-10;-10] F[10;-10] G[10;10] H[-10;10]   
 
- но будут еще.
 
 Try this points:
 ```javascript
@@ -179,10 +180,10 @@ Try this points:
 ```
 Результаты вычислений будет:
 
-> "Quadrilateral with points: E[-10;-10] F[10;-10] G[10;10] H[-10;10] "
-> "Have perimeter 80.00 and area 400.000"
-> "Quadrilateral with points: a[-9;-5.8] b[-6.2;9.1] c[-8.4;6.8] d[-2.9;-0.3] "
-> "Have perimeter 35.54 and area 23.610"
+> "Quadrilateral with points: E[-10;-10] F[10;-10] G[10;10] H[-10;10] "   
+> "Have perimeter 80.00 and area 400.000"   
+> "Quadrilateral with points: a[-9;-5.8] b[-6.2;9.1] c[-8.4;6.8] d[-2.9;-0.3] "   
+> "Have perimeter 35.54 and area 23.610"   
 
 # 2DArr
 ## app for class work 03.10.2018
