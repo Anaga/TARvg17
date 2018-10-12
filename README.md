@@ -9,11 +9,11 @@ N от 3х до 10
 
 Например файл из 4 точек будет такой
 
-Example:
-`-9.0;-5.8`
-`-6.2;9.1`
-`-8.4;6.8`
-`-2.9;-0.3`
+Example:   
+> -9.0;-5.8  
+> -6.2;9.1   
+> -8.4;6.8   
+> -2.9;-0.3   
 
 
 # BillList
@@ -23,8 +23,7 @@ Read from text file using QFile and QTextStream, set console local by \* system(
 Read one bill from chop and calculate total summ of bill.  
 
 
-Example:
-
+Example:   
 > Bill ID: 61550R4   
 > Amount  Price   Weight  Description   
 > 1.000   4.99    0.624   Alumiiniumist non-stick pann, 24 cm, tk   
@@ -44,11 +43,11 @@ qsDesc = inputConsole.readLine();
 
 Read points coordinates from text file using QFile and QStringList to split one row to X and to Y.
 
-Example:
-> -9.0;-5.8
-> -6.2;9.1
-> -8.4;6.8
-> -2.9;-0.3
+Example:   
+> -9.0;-5.8   
+> -6.2;9.1   
+> -8.4;6.8  
+> -2.9;-0.3  
 
 
 To parse input text file we use char buf[1024] for one line
