@@ -1,30 +1,32 @@
 # TARvg17
 
 ### Homework - Perimeter and Area of NGon from file with Points
-Продолжение прошлой домашки.
-Найти периметр и площадь N-угольника на основе Точек, прочитаных из текстового файла
-У вас есть текстовый файл, в котором на N сточек есть координаты N Точек. 
+
+Продолжение прошлой домашки.  
+Найти периметр и площадь N-угольника на основе Точек, прочитаных из текстового файла  
+У вас есть текстовый файл, в котором на N сточек есть координаты N Точек.   
 N от 3х до 10
+
 Например файл из 4 точек будет такой
+
 Example:
-> -9.0;-5.8
-> -6.2;9.1
-> -8.4;6.8
-> -2.9;-0.3
-
-
+`-9.0;-5.8`
+`-6.2;9.1`
+`-8.4;6.8`
+`-2.9;-0.3`
 
 
 # BillList
 ## app for class work 10.10.2018
-Read from text file using QFile and QTextStream, set console local by * system("chcp 65001"); * to printout Estoniand and Russian characters
-Read one bill from chop and calculate total summ of bill.
+
+Read from text file using QFile and QTextStream, set console local by \* system("chcp 65001"); \* to printout Estoniand and Russian characters  
+Read one bill from chop and calculate total summ of bill.  
 
 Example:
-> Bill ID: 61550R4
-> Amount  Price   Weight  Description
-> 1.000   4.99    0.624   Alumiiniumist non-stick pann, 24 cm, tk
-> 1.000   1.65    0.172   Krõpsud Pringles, 165 g
+`Bill ID: 61550R4`
+`Amount  Price   Weight  Description`
+`1.000   4.99    0.624   Alumiiniumist non-stick pann, 24 cm, tk`
+`1.000   1.65    0.172   Krõpsud Pringles, 165 g`
 
 To parse input text file we use QTextStream inputConsole
 ```javascript
@@ -34,15 +36,18 @@ inputConsole >> weight;
 qsDesc = inputConsole.readLine();
 ```
 
+
 # pointsFromFile
 ## app for class work 10.10.2018
+
 Read points coordinates from text file using QFile and QStringList to split one row to X and to Y.
 
 Example:
-> -9.0;-5.8
-> -6.2;9.1
-> -8.4;6.8
-> -2.9;-0.3
+`-9.0;-5.8`
+`-6.2;9.1`
+`-8.4;6.8`
+`-2.9;-0.3`
+
 
 To parse input text file we use char buf[1024] for one line
 ```javascript
@@ -72,6 +77,8 @@ while (!file.atEnd()){
 }
 qDebug() << printQuad(quadOne);
 ```
+
+
 
 ### Homework - Perimeter and Area of quadrilateral by 4 Points
 Найти периметр и площадь четырехугольника на основе 4х Точек
