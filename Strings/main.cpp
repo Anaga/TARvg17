@@ -3,6 +3,19 @@
 #include <iostream>
 #include <string>
 
+
+QString getMounth (uint number){
+    if (number==0) return "Error";
+    if (number>12) return "Error";
+    const QString mList[13] = {"Nulvar",
+                               "Jan", "Veb", "Mart",
+                               "Apr", "Mai", "Jun",
+                               "Jul", "Ags", "Sen",
+                               "Oct", "Nov", "Dec",
+                              };
+    return mList[number];
+}
+
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
@@ -50,7 +63,28 @@ int main(int argc, char *argv[])
     qDebug() << "Some text"+idCode;
     qDebug() << qPrintable(idCode.toLocal8Bit());
 
+    qDebug() << getMounth(02);
 
+
+    QString mFromIdCode = idCode.mid(3,2);
+    qDebug() << mFromIdCode;
+    bool bOk = false;
+
+    int m;
+    m = mFromIdCode.toInt(&bOk);
+    if (bOk) {
+        qDebug() << getMounth(m);
+    }
+
+    idCode = "38112025710";
+    mFromIdCode = idCode.mid(3,2);
+    qDebug() << mFromIdCode;
+    bOk = false;
+    m = mFromIdCode.toInt(&bOk);
+    if (bOk) {
+        qDebug() << "M is " << m;
+        qDebug() << getMounth(m);
+    }
 
 
 
