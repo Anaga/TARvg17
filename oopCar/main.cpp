@@ -5,29 +5,55 @@
 
 class Car
 {
-    float engeneVolume= 1.0 ;
-    int   doorsCount  = 4;
-    float tankMax = 50.0;
-    float gasVolume = 0.0;
-    float odometer = 0.0;
+    float engeneVolume= 1.0 ; // liters
+    int   doorsCount  = 4;    // units
+    float tankMax = 50.0;   // liters
+    float gasVolume = 0.0;  // liters
+    float odometer = 0.0;   // km
+    float gasConsumption = 14.6; // km per liter
 
 public:
     QString qsRegNumber = "      ";
 
-    Car() {}
-    Car(float vol) {engeneVolume = vol;}
-    Car(QString reg) {qsRegNumber = reg;}
+    Car() {
+        qDebug() << "defaule cons() 18";
+        setCons();
+    }
+
+    Car(float vol) {
+        qDebug() << "Car(float vol) 23";
+        engeneVolume = vol;
+        setCons();
+    }
+
+    Car(QString reg) {
+        qDebug() << "Car(QString reg) 29";
+        qsRegNumber = reg;
+        setCons();
+    }
 
     Car(float vol, QString reg) {
+        qDebug() << "Car(float vol, QString reg) 35";
         engeneVolume = vol;
         qsRegNumber = reg;
     }
+    // End of constructions
+
+
     void setDoorsCount(int newCount) {
         if ((newCount >1) && (newCount < 10)) {
             doorsCount = newCount;
         }
-
     }
+
+    void setCons(){
+        if (engeneVolume > 0.0) {
+            gasConsumption = engeneVolume*14.6;
+
+            qDebug() << "gasConsumption now = " <<gasConsumption ;
+        }
+    }
+
 
     QString toPrint() {
         QString qsTemp = "Reg Number is %1; engine vol is %2; doors count %3";
@@ -43,7 +69,16 @@ public:
         return volume;
     }
 
-
+    float drive ( float km) {
+        float litersSpend = km/gasConsumption;
+        qDebug() << "litersSpend = " <<litersSpend ;
+        if (gasVolume >= litersSpend) {
+            gasVolume-= litersSpend;
+            odometer+=km;
+            return km;
+        }
+        return 0;
+    }
 };
 
 int main(int argc, char *argv[])
@@ -71,7 +106,7 @@ int main(int argc, char *argv[])
     qDebug() << car2.toPrint();
 
     Car car3("324REF");
-   // car3.dorsCount = 12;
+    // car3.dorsCount = 12;
     car3.setDoorsCount(12);
     qDebug() << car3.toPrint();
 
@@ -85,9 +120,21 @@ int main(int argc, char *argv[])
     qDebug() << car4.fill(150);
     qDebug() << car4.shortPrint();
 
+    qDebug() << car4.drive(1);
+    qDebug() << car4.shortPrint();
 
+    qDebug() << car4.drive(10);
+    qDebug() << car4.shortPrint();
 
+    qDebug() << car4.drive(14.6);
+    qDebug() << car4.shortPrint();
+    qDebug() << car4.drive(40);
+    qDebug() << car4.shortPrint();
 
+    for (int i=0; i<10; i++){
+        qDebug() << car4.drive(250);
+        qDebug() << car4.shortPrint();
+    }
 
     return a.exec();
 }
