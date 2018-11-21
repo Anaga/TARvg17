@@ -36,3 +36,19 @@ QString NCar::toPrint()
     return qsTemp;
 
 }
+
+Plane::Plane()
+{
+    qDebug() << "Plane :42";
+    location = "Tallinn";
+}
+
+void Plane::fly(QString destination)
+{
+    QString qsTemp = "Fly from %1 to %2";
+    qsTemp = qsTemp.arg(location).arg(destination);
+    qDebug().noquote() << qsTemp;
+    location = destination;
+}
+
+

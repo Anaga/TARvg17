@@ -24,4 +24,12 @@ public:
     QString toPrint();
 };
 
+class Plane
+{
+    QString location;
+
+public:
+    Plane();
+    void fly(QString destination);
+};
 #endif // NCAR_H
