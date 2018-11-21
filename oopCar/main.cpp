@@ -99,23 +99,23 @@ int main(int argc, char *argv[])
 
     //qDebug() << "My new car Reg Number is " << my_new_car.qsRegNumber << "engen vol is " << my_new_car.engeneVolume;
 
-    qDebug() << my_car.toPrint();
-    qDebug() << my_new_car.toPrint();
+    qDebug().noquote() << my_car.toPrint();
+    qDebug().noquote() << my_new_car.toPrint();
 
     Car car2(static_cast<float>(13.0/12.0));
     //car2.engeneVolume = 13.0/12;
-    qDebug() << car2.toPrint();
+    qDebug().noquote()  << car2.toPrint();
 
     Car car3("324REF");
     // car3.dorsCount = 12;
     car3.setDoorsCount(12);
-    qDebug() << car3.toPrint();
+    qDebug().noquote()  << car3.toPrint();
 
     car3.setDoorsCount(8);
-    qDebug() << car3.toPrint();
+    qDebug().noquote()  << car3.toPrint();
 
     Car car4(12,"AZX322");
-    qDebug() << car4.toPrint();
+    qDebug().noquote()  << car4.toPrint();
     qDebug() << car4.shortPrint();
 
     qDebug() << car4.fill(150);
