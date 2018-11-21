@@ -1,6 +1,8 @@
 #include <QCoreApplication>
 #include <QDebug>
 
+#include "ncar.h"
+
 // Class car
 
 class Car
@@ -82,6 +84,13 @@ public:
     }
 };
 
+
+QDebug operator<<(QDebug dbg, NCar &c){
+    QDebugStateSaver saver(dbg);
+    dbg.noquote() << c.toPrint();
+    return dbg;
+}
+
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
@@ -137,5 +146,17 @@ int main(int argc, char *argv[])
         qDebug() << car4.shortPrint();
     }
 
+    NCar new_car1;
+    qDebug() << new_car1;
+    new_car1.drive(20);
+    qDebug() << new_car1;
+    new_car1.fill(20);
+    qDebug() << new_car1;
+    new_car1.drive(20);
+    qDebug() << new_car1;
+    new_car1.qsRegNumber = "AAA111";
+    qDebug() << new_car1;
+    new_car1.drive(20);
+    qDebug() << new_car1;
     return a.exec();
 }
