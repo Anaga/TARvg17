@@ -22,6 +22,7 @@ int main()
     QString qsFileName = "61550R4.txt";
     qsFileName = "61550R4.txt";
     qsFileName = "61548R2.txt";
+    qsFileName = "61550R4.txt";
 
     QFile file(qsFileName);
     if (!file.exists()){
@@ -36,6 +37,12 @@ int main()
         message = message.arg(qsFileName);
         qDebug() << message;
         return -1;
+    }
+
+    while (!file.atEnd()) {
+          QByteArray line = file.readLine();
+          QString qsLine(line);
+          qDebug() << ":" << qsLine;
     }
 
     QTextStream inputConsole(&file);
