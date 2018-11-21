@@ -10,7 +10,7 @@ class Car
     float tankMax = 50.0;   // liters
     float gasVolume = 0.0;  // liters
     float odometer = 0.0;   // km
-    float gasConsumption = 14.6; // km per liter
+    float gasConsumption = static_cast<float>(14.6); // km per liter
 
 public:
     QString qsRegNumber = "      ";
@@ -47,21 +47,22 @@ public:
     }
 
     void setCons(){
-        if (engeneVolume > 0.0) {
-            gasConsumption = engeneVolume*14.6;
-
+        if (engeneVolume > static_cast<float>(0.0)) {
+            gasConsumption = engeneVolume*static_cast<float>(14.6);
             qDebug() << "gasConsumption now = " <<gasConsumption ;
         }
     }
 
 
     QString toPrint() {
-        QString qsTemp = "Reg Number is %1; engine vol is %2; doors count %3";
-        return qsTemp.arg(qsRegNumber).arg( (double)engeneVolume, 2 , 'f', 3).arg(doorsCount);
+        QString qsTemp = "Reg Number is %1; engine vol is %2; doors count %3\n"
+                         "Gas current vol: %4, max vol: %5";
+        return qsTemp.arg(qsRegNumber).arg( static_cast<double>(engeneVolume), 2 , 'f', 3).arg(doorsCount)
+                .arg( static_cast<double>(gasVolume)).arg( static_cast<double>(tankMax));
     }
     QString shortPrint() {
         QString qsTemp = "Reg Number is %1; gas volume %2; odomentr %3";
-        return qsTemp.arg(qsRegNumber).arg( (double)gasVolume).arg((double) odometer, 2 , 'f', 3);
+        return qsTemp.arg(qsRegNumber).arg(static_cast<double>(gasVolume)).arg(static_cast<double>(odometer), 2 , 'f', 3);
     }
 
     float fill( float volume){
@@ -86,13 +87,13 @@ int main(int argc, char *argv[])
     QCoreApplication a(argc, argv);
     qDebug()<< "Hello";
 
-    Car my_car(1.2);
+    Car my_car(static_cast<float>(1.2));
     //my_car.engeneVolume = 1.2;
     my_car.qsRegNumber = "ABC234";
 
     //qDebug() << "My car Reg Number is " << my_car.qsRegNumber << "engen vol is " << my_car.engeneVolume;
 
-    Car my_new_car(2.2);
+    Car my_new_car(static_cast<float>(2.2));
     //my_new_car.engeneVolume = 2.2;
     my_new_car.qsRegNumber = "III111";
 
@@ -101,7 +102,7 @@ int main(int argc, char *argv[])
     qDebug() << my_car.toPrint();
     qDebug() << my_new_car.toPrint();
 
-    Car car2(13.0/12);
+    Car car2(static_cast<float>(13.0/12.0));
     //car2.engeneVolume = 13.0/12;
     qDebug() << car2.toPrint();
 
@@ -126,7 +127,7 @@ int main(int argc, char *argv[])
     qDebug() << car4.drive(10);
     qDebug() << car4.shortPrint();
 
-    qDebug() << car4.drive(14.6);
+    qDebug() << car4.drive(static_cast<float>(14.6));
     qDebug() << car4.shortPrint();
     qDebug() << car4.drive(40);
     qDebug() << car4.shortPrint();
