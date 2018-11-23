@@ -1,5 +1,23 @@
 # TARvg17
 
+### Homework - Read presentatnion and check links.
+Start: 21.11.2018, deadline: 05.12.2018
+Read presentation and chek all links. 
+Mail to me, what link is broken, and what resurce do you like more.
+Link - 
+
+### Homework - complite Car class 
+Start: 14.11.2018, deadline: 28.11.2018
+Link - 
+
+### Homework - Get Varaible type and number
+Start: 07.11.2018, deadline: 21.11.2018
+Link - 
+
+### Homework - Palindrome
+Start: 01.11.2018, deadline: 15.11.2018
+Link - 
+
 ### Homework - Perimeter and Area of NGon from file with Points
 
 Продолжение прошлой домашки.  
