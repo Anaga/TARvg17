@@ -17,21 +17,21 @@
  with design, is this line is palindrome, or not. 
 
 Example input file: 
-> kazak 
-> kazah 
-> madam 
-> adam 
-> 666 
-> 65456 
-> 12345 
+> kazak    
+> kazah    
+> madam    
+> adam     
+> 666      
+> 65456    
+> 12345    
 
 
 Example output file:   
-> yes, it  is a palindrome: kazak 
-> this is not a palindrome: kazah 
-> yes, it  is a palindrome: madam 
-> this is not a palindrome: adam 
-> yes, it  is a palindrome: 666 
-> yes, it  is a palindrome: 65456 
-> this is not a palindrome: 12345 
+> yes, it  is a palindrome: kazak    
+> this is not a palindrome: kazah    
+> yes, it  is a palindrome: madam    
+> this is not a palindrome: adam     
+> yes, it  is a palindrome: 666      
+> yes, it  is a palindrome: 65456    
+> this is not a palindrome: 12345    
 

@@ -1,22 +1,22 @@
 # TARvg17
 
-### Homework - Read presentatnion and check links.
-Start: 21.11.2018, deadline: 05.12.2018
-Read presentation and chek all links. 
-Mail to me, what link is broken, and what resurce do you like more.
-Link - 
+### Homework - Read presentatnion and check links.    
+Start: 21.11.2018, deadline: 05.12.2018    
+Read presentation and chek all links.     
+Mail to me, what link is broken, and what resurce do you like more.    
+Link - https://github.com/Anaga/TARvg17/November%202018%20-%20juniors.pdf
 
-### Homework - complite Car class 
-Start: 14.11.2018, deadline: 28.11.2018
-Link - 
+### Homework - complite Car class    
+Start: 14.11.2018, deadline: 28.11.2018    
+Link -  https://github.com/Anaga/TARvg17/tree/master/oopCar    
 
-### Homework - Get Varaible type and number
-Start: 07.11.2018, deadline: 21.11.2018
-Link - 
+### Homework - Get Varaible type and number    
+Start: 07.11.2018, deadline: 21.11.2018    
+Link -  https://github.com/Anaga/TARvg17/tree/master/Conteiners/Conteiners/HomeWork    
 
 ### Homework - Palindrome
 Start: 01.11.2018, deadline: 15.11.2018
-Link - 
+Link - https://github.com/Anaga/TARvg17/tree/master/HomeWorksData/Palindrome
 
 ### Homework - Perimeter and Area of NGon from file with Points
 
