@@ -1,0 +1,15 @@
+yes, it  is a palindrome: kazak             
+this is not a palindrome: kazah  
+yes, it  is a palindrome: madam  
+this is not a palindrome: adam   
+yes, it  is a palindrome: 666           
+yes, it  is a palindrome: 65456  
+this is not a palindrome: 12345           
+yes, it  is a palindrome: A man, a plan, a canal, Panama!  
+this is not a palindrome: The old man in canal.
+yes, it  is a palindrome: Was it a car or a cat I saw?  
+this is not a palindrome: Palindrome  
+yes, it  is a palindrome: No 'x' in Nixon  
+yes, it  is a palindrome: А роза упала на лапу Азора                             
+yes, it  is a palindrome: Аргентина манит негра
+this is not a palindrome: Улыбок тебе, дед Макар  
