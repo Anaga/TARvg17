@@ -18,6 +18,15 @@ Link -  https://github.com/Anaga/TARvg17/tree/master/Conteiners/Conteiners/HomeW
 Start: 01.11.2018, deadline: 15.11.2018
 Link - https://github.com/Anaga/TARvg17/tree/master/HomeWorksData/Palindrome
 
+
+### Список домашних работ  
+> 10.10.2018 - NGon Arrea   
+> 03.10.2018 - Quadrilateral Arrea   
+> 26.09.2018 - Array merge   
+> 26.09.2018 - Stars triangle   
+> 19.09.2018 - Triangle types   
+> 19.09.2018 - Weight calculator   
+
 ### Homework - Perimeter and Area of NGon from file with Points
 
 Продолжение прошлой домашки.  
