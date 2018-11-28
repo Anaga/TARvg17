@@ -1,6 +1,12 @@
 # Oop Rodent
 main class for all rodents.
 
+C++ Inheritance
+https://www.tutorialspoint.com/cplusplus/cpp_inheritance.htm
+
+C++ Class Constructor and Destructor
+https://www.tutorialspoint.com/cplusplus/cpp_constructor_destructor.htm
+
 ```javascript
 class Rodent
 {
