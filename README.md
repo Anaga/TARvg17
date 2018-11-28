@@ -1,5 +1,32 @@
 # TARvg17
 
+### Homework - Read presentatnion and check links.    
+Start: 21.11.2018, deadline: 05.12.2018    
+Read presentation and chek all links.     
+Mail to me, what link is broken, and what resurce do you like more.    
+Link - https://github.com/Anaga/TARvg17/November%202018%20-%20juniors.pdf
+
+### Homework - complite Car class    
+Start: 14.11.2018, deadline: 28.11.2018    
+Link -  https://github.com/Anaga/TARvg17/tree/master/oopCar    
+
+### Homework - Get Varaible type and number    
+Start: 07.11.2018, deadline: 21.11.2018    
+Link -  https://github.com/Anaga/TARvg17/tree/master/Conteiners/Conteiners/HomeWork    
+
+### Homework - Palindrome
+Start: 01.11.2018, deadline: 15.11.2018
+Link - https://github.com/Anaga/TARvg17/tree/master/HomeWorksData/Palindrome
+
+
+### Список домашних работ  
+> 10.10.2018 - NGon Arrea   
+> 03.10.2018 - Quadrilateral Arrea   
+> 26.09.2018 - Array merge   
+> 26.09.2018 - Stars triangle   
+> 19.09.2018 - Triangle types   
+> 19.09.2018 - Weight calculator   
+
 ### Homework - Perimeter and Area of NGon from file with Points
 
 Продолжение прошлой домашки.  
