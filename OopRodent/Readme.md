@@ -22,3 +22,13 @@ public:
     bool lifeDay(); // spend one day of life, ferurn false is rodent die.
 };
 ```
+
+```javascript
+class Mouse: public Rodent{
+public:
+    Mouse(QString name); // Constructor
+    void addTwoGrams();   // super power :)
+    bool lifeDay();     // function overloading
+};
+```
+
