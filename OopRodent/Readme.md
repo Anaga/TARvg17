@@ -1,7 +1,6 @@
-# Oop Rodent  -
+# Oop Rodent
 main class for all rodents.
-
-'''
+```javascript
 class Rodent
 {
     double weight =1.0; //gramm
@@ -15,4 +14,4 @@ public:
     void feed(double food); // Feed rodent with some gramm of food
     bool lifeDay(); // spend one day of life, ferurn false is rodent die.
 };
-'''
+```
