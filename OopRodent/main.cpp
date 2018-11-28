@@ -7,32 +7,59 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
     qDebug() << "Heeelo all Rodent";
+    {
+        Rodent hamster("Ham");
+        qDebug()<< "Ham name : " << hamster.getName();
+        qDebug()<< "Ham weigth: " <<  hamster.getWeight();
 
+        hamster.lifeDay();
+        qDebug()<< "Ham weigth: " <<  hamster.getWeight();
 
-    Rodent hamster("Ham");
+        hamster.lifeDay();
+        qDebug()<< "Ham weigth: " <<  hamster.getWeight();
 
-    qDebug()<< hamster.getName();
+        hamster.addTwoGrams();
+
+        hamster.lifeDay();
+        qDebug()<< "Ham weigth: " <<  hamster.getWeight();
+
+        hamster.lifeDay();
+        qDebug()<< "Ham weigth: " <<  hamster.getWeight();
+
+        //hamster.weight = 152.0;
+        //qDebug()<<  "new Ham weigth: " <<  hamster.weight;
+    }
+    Rodent mouse("Mous");
+    qDebug()<< mouse.getName();
 
     {
-        Rodent mouse("Mous");
-        qDebug()<< mouse.getName();
+        Mouse m1("New Mouse");
+        qDebug()<< m1.getName();
+        qDebug()<< "Mouse weigth: " <<  m1.getWeight();
+
+        m1.lifeDay();
+        qDebug()<< "Mouse weigth: " <<  m1.getWeight();
+
+        m1.addTwoGrams();
+        qDebug()<< "Mouse weigth: " <<  m1.getWeight();
+
+        m1.lifeDay();
+        qDebug()<< "Mouse weigth: " <<  m1.getWeight();
+
+        m1.addTwoGrams();
+
+        m1.lifeDay();
+        qDebug()<< "Mouse weigth: " <<  m1.getWeight();
+
+        m1.lifeDay();
+        qDebug()<< "Mouse weigth: " <<  m1.getWeight();
+
+        m1.addTwoGrams();
+
+        m1.lifeDay();
+        qDebug()<< "Mouse weigth: " <<  m1.getWeight();
+
     }
-    Rodent rat("Rat");
-
-    Rodent *pRodent;
-
-    pRodent = new Rodent("LabRat");
-    pRodent = new Rodent("LabRat2");
-    for (int i=0; i<3; i++){
-        QString qsTemp = "Rat %1";
-        Rodent labRat(qsTemp.arg(i));
-        qDebug() << "Creare new Rodent, number " << i;
-    }
-    //qDebug() << qsTemp;
-    qDebug() << "Who will die?";
-    delete pRodent;
-
-
 
     return a.exec();
 }
