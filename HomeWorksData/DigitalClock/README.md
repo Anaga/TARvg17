@@ -18,3 +18,14 @@ Output shall be like:
 ![see App1](https://github.com/Anaga/TARvg17/blob/master/HomeWorksData/DigitalClock/Application.PNG "Ood value")  
 ![see App2](https://github.com/Anaga/TARvg17/blob/master/HomeWorksData/DigitalClock/Application2.PNG "Even value")  
 
+
+The debug output is:  
+> Timer start, call the tick
+> "2018.12.05 23:34:01" 
+> "2018.12.05 23 34 02" 
+> "2018.12.05 23:34:03" 
+> "2018.12.05 23 34 04" 
+> "2018.12.05 23:34:05" 
+> "2018.12.05 23 34 06" 
+> "2018.12.05 23:34:07" 
+
