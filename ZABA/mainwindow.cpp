@@ -44,7 +44,11 @@ QString MainWindow::sort(QString qsInput){
     std::sort(myList.begin(), myList.end());
 
     qDebug() << "My list after sorting " << myList;
-    return ("A"+qsInput+"B");
+    QString qsOutput;
+    for (int i = 0; i < myList.size(); ++i) {
+        qsOutput.prepend(myList.at(i));
+    }
+    return (qsOutput);
 }
 
 bool MainWindow::writeToFile(QString qsWord)
