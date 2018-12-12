@@ -26,6 +26,7 @@ private slots:
 
 private:
     QString sort(QString qsInput);
+    QString arraySolution(QString qsInput);
     bool writeToFile(QString qsWord);
     bool readFromFile(QString fileName);
 

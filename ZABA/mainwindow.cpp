@@ -17,7 +17,8 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_Sort_clicked()
 {
     QString qsTemp = ui->lineEdit_Input->text();
-    qsTemp = sort(qsTemp);
+    qsTemp = arraySolution(qsTemp);
+    //qsTemp = sort(qsTemp);
     ui->plainTextEdit_Output->appendPlainText(qsTemp);
     ui->lineEdit_Input->clear();
     ui->lineEdit_Input->setFocus();
@@ -51,6 +52,57 @@ QString MainWindow::sort(QString qsInput){
     return (qsOutput);
 }
 
+
+QString MainWindow::arraySolution(QString qsInput)
+{
+    // this function not use sort,  but use array, and can handle only [a..z] letters
+#define ALPHABET_LENGTH 26
+    QChar arr_ch[ALPHABET_LENGTH];
+    int arr_i[ALPHABET_LENGTH] = {0};
+    
+    for (int i = 0; i < ALPHABET_LENGTH; ++i) {
+        arr_ch[i]='a'+i;
+    }
+
+    qDebug() << "arr content:";
+    QString firstRow = "Leter: ";
+    QString secondRow= "Count: ";
+    for (int i = 0; i < ALPHABET_LENGTH; ++i) {
+        firstRow .append(arr_ch[i]).append(" | ");
+        secondRow.append(QString::number(arr_i[i])) .append(" | ");
+    }
+    qDebug() << firstRow;
+    qDebug() << secondRow;
+
+    char ch;
+    for (int i=0; i<qsInput.length(); i++){
+        ch = qsInput.at(i).toLatin1();
+        if ((ch>='a') && (ch<='z')) { // we will update count only for [a..z] letters
+            // get array position base on delta from 'a' char.
+            // so, for char 'c' delta will be 3 ('c'-'a'=3)
+            // and for char 'o' delta will be 13 ('o'-'a'=12)
+            int delta = ch - 'a';
+            arr_i[delta]++;
+        }
+    }
+    qDebug() << "arr content:";
+    firstRow = "Leter: ";
+    secondRow= "Count: ";
+    for (int i = 0; i < ALPHABET_LENGTH; ++i) {
+        firstRow .append(arr_ch[i]).append(" | ");
+        secondRow.append(QString::number(arr_i[i])) .append(" | ");
+    }
+    qDebug() << firstRow;
+    qDebug() << secondRow;
+    QString qsOutput;
+    for (int i = 0; i < ALPHABET_LENGTH; ++i) { // for all letters
+        for (int j=0; j<arr_i[i]; j++){     // we will insert to qsOutput begin
+            qsOutput.prepend(arr_ch[i]);    // this letter from 0 till arr_i[i] count
+        }                                   // most time it is zerro
+    }
+    return qsOutput;
+}
+
 bool MainWindow::writeToFile(QString qsWord)
 {
     QFile outFile(qsFileName);
@@ -81,7 +133,7 @@ bool MainWindow::readFromFile(QString fileName)
         qDebug() << "One line from file " << fileName << "is :" << qsOneLine;
         ui->lineEdit_Input->setText(qsOneLine);
         ui->pushButton_Sort->click();
-            }
+    }
     return true;
 }
 
