@@ -23,7 +23,7 @@ int main()
     qsFileName = "61550R4.txt";
     qsFileName = "61548R2.txt";
     qsFileName = "61550R4.txt";
-
+    qsFileName = "C:/Users/Aleksandr Boborev/Documents/Git/TARvg17/BillList/Bills List.txt";
     QFile file(qsFileName);
     if (!file.exists()){
         message = "Can't find file %1 to read\n";
@@ -42,8 +42,11 @@ int main()
     while (!file.atEnd()) {
           QByteArray line = file.readLine();
           QString qsLine(line);
-          qDebug() << ":" << qsLine;
+          qDebug().noquote() << ":" << qsLine.trimmed();;
     }
+
+    file.close();
+    file.open(QFile::ReadOnly | QFile::Text);
 
     QTextStream inputConsole(&file);
     inputConsole.setAutoDetectUnicode(true);
@@ -74,7 +77,7 @@ int main()
 
         qsTemp = "A:%1 P:%2 W:%3 SUMMA:%4 D:%5 \n";
         qsTemp=qsTemp.arg(amount).arg(price).arg(weight).arg(summa).arg(qsDesc);
-        //cout <<"A: " <<amount  << "  P: "<< price << weight << qUtf8Printable(qsDesc);
+        cout <<"A: " <<amount  << "  P: "<< price << weight << qUtf8Printable(qsDesc);
         cout << qUtf8Printable(qsTemp);
         }
 
@@ -104,7 +107,7 @@ int main()
 }
 
 item ParseOneRow(QString row){
-    //cout << __func__ << endl;
+    cout << __func__ << endl;
     item one;
     QTextStream in(&row, QIODevice::ReadOnly);
     in >> one.Amount;

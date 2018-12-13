@@ -25,4 +25,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 DISTFILES += \
     Bills List.txt \
     Bills List.txt \
-    Bills ListUTF8BOM.txt
+    Bills ListUTF8BOM.txt \
+    Reg_State.py

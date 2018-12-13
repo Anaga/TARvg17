@@ -84,6 +84,10 @@ public:
     }
 };
 
+class Truck: public NCar{
+
+};
+
 
 QDebug operator<<(QDebug dbg, NCar &c){
     QDebugStateSaver saver(dbg);
@@ -158,5 +162,10 @@ int main(int argc, char *argv[])
     qDebug() << new_car1;
     new_car1.drive(20);
     qDebug() << new_car1;
+
+    Truck truck1;
+    truck1.qsRegNumber="BBB222";
+    qDebug() << truck1.toPrint();
+
     return a.exec();
 }
