@@ -16,7 +16,7 @@ typedef struct {
 } T_variable;
 ```
 
-If we use [dl_gsw.ini] (https://github.com/Anaga/TARvg17/blob/master/Conteiners/Conteiners/HomeWork/dl_gsw.ini), and user start applicatin:  
+If we use [dl_gsw.ini](https://github.com/Anaga/TARvg17/blob/master/Conteiners/Conteiners/HomeWork/dl_gsw.ini), and user start applicatin:  
 > 
 > Please enter name to search, or 0 to exit:   
 > PHASE_SM0   
