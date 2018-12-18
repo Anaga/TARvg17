@@ -9,6 +9,11 @@
 > 07.11.2018 - Get Varaible type and number  
 > 01.11.2018 - Palindrome  
 
+Итого - 6 домаших работ с кодом.
+Обязательно нужно сделать хотя бы 4 их них.
+4 лучших оценки за домашки пойдут в зачет за предмет (40%)
+60% от оценки - это котрольная работа.
+
 
 ### Homework - 5 longest rows from file    
 Start: 12.12.2018, deadline: 26.12.2018    
@@ -37,7 +42,7 @@ Start: 07.11.2018, deadline: 21.11.2018
 Link -  https://github.com/Anaga/TARvg17/tree/master/Conteiners/Conteiners/HomeWork    
 
 ### Homework - Palindrome
-Start: 01.11.2018, deadline: 15.11.2018
+Start: 01.11.2018, deadline: 15.11.2018  
 Link - https://github.com/Anaga/TARvg17/tree/master/HomeWorksData/Palindrome
 
 
