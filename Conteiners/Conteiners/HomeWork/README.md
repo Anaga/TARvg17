@@ -19,23 +19,23 @@ typedef struct {
 If we use dl_gsw.ini, and user start applicatin:  
 > 
 > Please enter name to search, or 0 to exit:   
-> >PHASE_SM0   
+> PHASE_SM0   
 > Varaible 'PHASE_SM0' have type 'U8' and number '42'   
 >    
 > Please enter name to search, or 0 to exit:   
-> >TARGET_GAUGE2   
+> TARGET_GAUGE2   
 > Varaible 'TARGET_GAUGE2' have type 'U16' and number '58'   
 >    
 > Please enter name to search, or 0 to exit:   
-> >TARGET_GAUGE4   
+> TARGET_GAUGE4   
 > Can't find Varaible 'TARGET_GAUGE4' in file 'dl_gsw.ini'   
 > 
 > Please enter name to search, or 0 to exit:   
-> >MAX_EXEC_LOGIC_PT   
+> MAX_EXEC_LOGIC_PT   
 > Varaible 'MAX_EXEC_LOGIC_PT' have type 'U32' and number '86'   
 >    
 > Please enter name to search, or 0 to exit:   
-> >0   
+> 0   
 > Good bay!   
 > 
 
