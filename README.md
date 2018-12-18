@@ -1,5 +1,27 @@
 # TARvg17
 
+### Список домашних работ  
+> 12.12.2018 - 5 longest rows   
+> 05.12.2018 - Digital Clock   
+> 28.11.2018 - Rodent class   
+> 21.11.2018 - Read presentatnion (optional work)   
+> 14.11.2018 - Complite Car class   
+> 07.11.2018 - Get Varaible type and number  
+> 01.11.2018 - Palindrome  
+
+
+### Homework - 5 longest rows from file    
+Start: 12.12.2018, deadline: 26.12.2018    
+Link -  https://github.com/Anaga/TARvg17/tree/master/HomeWorksData/5LongestRows 
+
+### Homework - Digital Clock    
+Start: 05.12.2018, deadline: 19.12.2018    
+Link -  https://github.com/Anaga/TARvg17/tree/master/HomeWorksData/DigitalClock 
+
+### Homework - Rodent class    
+Start: 28.11.2018, deadline: 12.12.2018    
+Link -  https://github.com/Anaga/TARvg17/tree/master/OopRodent
+
 ### Homework - Read presentatnion and check links.    
 Start: 21.11.2018, deadline: 05.12.2018    
 Read presentation and chek all links.     
