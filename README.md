@@ -1,5 +1,10 @@
 # TARvg17
 
+### Class Test 2
+# 19.12.2018
+Link -  https://github.com/Anaga/csv 
+
+
 ### Список домашних работ  
 > 12.12.2018 - 5 longest rows   
 > 05.12.2018 - Digital Clock   

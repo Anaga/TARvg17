@@ -38,4 +38,6 @@ public:
     bool lifeDay();
 };
 
+//Add new class Hamster, base on Rodent
+
 #endif // RODENT_H
