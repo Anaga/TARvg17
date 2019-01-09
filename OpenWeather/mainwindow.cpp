@@ -20,8 +20,9 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_Get_clicked()
 {
+    QString qsCityName= ui->comboBox->currentText();
     QString qsTemp = ui->lineEdit_Address->text();
-    ui->textBrowser->append("URL : " + qsTemp);
+    ui->textBrowser->append(qsCityName + " URL : " + qsTemp);
     QUrl adress;
     //adress.setUrl("https://qt-project.org",);
     //adress.setScheme("https");
@@ -65,6 +66,7 @@ void MainWindow::replyFinished(QNetworkReply *reply)
     qDebug() << qsHeadersList;
     ui->textBrowser->append("Headers: " + qsHeadersList);
     ui->textBrowser->append("Content: " + qsContent);
+
 
     //QString qsTemp = reply->readAll();
     //ui->textBrowser->append(qsTemp);
