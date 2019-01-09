@@ -47,6 +47,25 @@ void MainWindow::replyFinished(QNetworkReply *reply)
         return;
     }
 
+    QList<QByteArray> replyHeaders = reply->rawHeaderList();
+    QString qsHeadersList;
+    QByteArray baContent = reply->readAll();
+    QString qsContent = baContent;
+    QPair<QByteArray, QByteArray> HeaderPair;
+    qDebug() << "Headers list:"<<  reply->rawHeaderList(); //<< "content:";// << reply1->readAll();
+    qDebug() << "Replay Headers list: count " << replyHeaders.size();
+    for (int i = 0; i < replyHeaders.size(); ++i) {
+        HeaderPair = reply->rawHeaderPairs().at(i);
+        qsHeadersList.append(HeaderPair.first);
+        qsHeadersList.append(": ");
+        qsHeadersList.append(HeaderPair.second);
+        qsHeadersList.append("\n");
+        qDebug() << "i is: "<< i;
+    }
+    qDebug() << qsHeadersList;
+    ui->textBrowser->append("Headers: " + qsHeadersList);
+    ui->textBrowser->append("Content: " + qsContent);
+
     //QString qsTemp = reply->readAll();
     //ui->textBrowser->append(qsTemp);
 
