@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Open Weather</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout_3">
@@ -79,6 +79,39 @@
           <widget class="QPushButton" name="pushButton">
            <property name="text">
             <string>Update</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_8">
+           <property name="text">
+            <string>Temp </string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLCDNumber" name="lcdNumber">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="smallDecimalPoint">
+            <bool>true</bool>
+           </property>
+           <property name="segmentStyle">
+            <enum>QLCDNumber::Flat</enum>
            </property>
           </widget>
          </item>
@@ -214,7 +247,7 @@
      <x>0</x>
      <y>0</y>
      <width>593</width>
-     <height>21</height>
+     <height>17</height>
     </rect>
    </property>
   </widget>

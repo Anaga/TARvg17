@@ -14,6 +14,11 @@ struct item{
     float Summa;
 };
 
+struct stringItem{
+    QString s;
+    int length;
+};
+
 item ParseOneRow(QString row);
 
 int main()

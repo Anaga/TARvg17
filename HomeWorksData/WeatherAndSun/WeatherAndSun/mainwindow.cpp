@@ -6,6 +6,13 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->label_2->setHidden(true);
+    ui->lineEdit_Addr->setHidden(true);
+
+    ui->label_4->setHidden(true);
+    ui->lineEdit_AppKey->setHidden(true);
+
+
 }
 
 MainWindow::~MainWindow()
@@ -61,7 +68,7 @@ response:
     //"sunset":1547041538
 
     QDateTime dtSunRise;
-    dtSunRise.setSecsSinceEpoch(1547017888);
+    dtSunRise.setSecsSinceEpoch(1547363224);
     QTime tSunRise = dtSunRise.time();
     int iSunRiseInSec = tSunRise.msecsSinceStartOfDay()/1000;
     QString qsTemp = tSunRise.toString("HH:mm:ss");
@@ -71,7 +78,7 @@ response:
     ui->lineEdit_SunRise->setText("Sun rise: "+qsTemp);
 
     QDateTime dtSunSet;
-    dtSunSet.setSecsSinceEpoch(1547041538);
+    dtSunSet.setSecsSinceEpoch(1547387572);
     QTime tSunSet = dtSunSet.time();
     int iSunSetInSec = tSunSet.msecsSinceStartOfDay()/1000;
     qsTemp = tSunSet.toString("HH:mm:ss");
@@ -83,7 +90,7 @@ response:
 
     QDateTime dt = QDateTime::currentDateTime();
     QTime tNow = dt.time();
-    tNow = tNow.addSecs(60*60*11); // shift for 11 hour in future
+    //tNow = tNow.addSecs(60*60*11); // shift for 11 hour in future
     int iNowInSec = tNow.msecsSinceStartOfDay()/1000;
     ui->progressBar->setValue(iNowInSec);
     qDebug() << "iNowInSec "<< iNowInSec;
@@ -91,6 +98,8 @@ response:
     ui->label_Sun->setText("Now is: "+qsTemp);
 
     //"main":{"temp":-4.79,
-    ui->verticalSlider->setValue(-5);
-
+    // "temp":271.68
+    double tempC = 271.68-273.15;
+    ui->verticalSlider->setValue(static_cast<int>(tempC));
+    ui->lcdNumber->display(tempC);
 }
