@@ -77,6 +77,38 @@ void MainWindow::parseJson(QByteArray inputArray)
 {
     qDebug() << "parseJson";
     qDebug() << "inputArray is " << inputArray;
+    QJsonParseError parError;
+    QJsonDocument mainJson = QJsonDocument::fromJson(inputArray,&parError);
+
+    if (parError.error != QJsonParseError::NoError) {
+        qDebug() << "Error in parsing" << parError.errorString();
+        return;
+    }
+    qDebug() << "no errors in parseJson";
+
+    if (mainJson.isArray()) { qDebug() << "This is Array";}
+    if (mainJson.isObject()) { qDebug() << "This is Object";}
+    if (mainJson.isNull()) { qDebug() << "This is Null";}
+    if (mainJson.isEmpty()) { qDebug() << "This is Empty";}
+
+    QJsonObject myObj = mainJson.object();
+    qDebug() << "All keys ";
+    qDebug() << myObj.keys();
+
+    if (!myObj.contains("main")) {
+        qDebug() << "no main in parseJson";
+        return;
+    }
+    QJsonValue keyValue = myObj.value("main");
+    qDebug() << keyValue;
+
+    QJsonObject item = keyValue.toObject();
+    keyValue = item.value("temp");
+    qDebug() << keyValue;
+
+
+    double d_tempCelc = keyValue.toDouble(-200);
+    ui->label->setText(QString::number(d_tempCelc));
 
 }
 

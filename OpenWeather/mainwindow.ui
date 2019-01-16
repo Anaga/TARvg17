@@ -81,7 +81,12 @@
        <widget class="QTextBrowser" name="textBrowser"/>
       </item>
       <item row="6" column="0" colspan="4">
-       <widget class="QPlainTextEdit" name="plainTextEdit"/>
+       <widget class="QPlainTextEdit" name="plainTextEdit">
+        <property name="plainText">
+         <string>{&quot;coord&quot;:{&quot;lon&quot;:26.72,&quot;lat&quot;:58.37},&quot;weather&quot;:[{&quot;id&quot;:803,&quot;main&quot;:&quot;Clouds&quot;,&quot;description&quot;:&quot;broken clouds&quot;,&quot;icon&quot;:&quot;04d&quot;}],&quot;base&quot;:&quot;stations&quot;,&quot;main&quot;:{&quot;temp&quot;:-6,&quot;pressure&quot;:997,&quot;humidity&quot;:79,&quot;temp_min&quot;:-6,&quot;temp_max&quot;:-6},&quot;visibility&quot;:10000,&quot;wind&quot;:{&quot;speed&quot;:4.1,&quot;deg&quot;:240},&quot;clouds&quot;:{&quot;all&quot;:68},&quot;dt&quot;:1547646600,&quot;sys&quot;:{&quot;type&quot;:1,&quot;id&quot;:1335,&quot;message&quot;:0.0031,&quot;country&quot;:&quot;EE&quot;,&quot;sunrise&quot;:1547621236,&quot;sunset&quot;:1547647151},&quot;id&quot;:588335,&quot;name&quot;:&quot;Tartu&quot;,&quot;cod&quot;:200}
+</string>
+        </property>
+       </widget>
       </item>
       <item row="4" column="2">
        <widget class="QPushButton" name="pushButton_Parse">
