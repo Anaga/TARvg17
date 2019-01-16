@@ -110,6 +110,40 @@ void MainWindow::parseJson(QByteArray inputArray)
     double d_tempCelc = keyValue.toDouble(-200);
     ui->label->setText(QString::number(d_tempCelc));
 
+    keyValue = myObj.value("weather");
+    qDebug() << "weather :" << keyValue;
+// working with array
+    QJsonArray arr = keyValue.toArray();
+     qDebug() << "array :" << arr;
+
+     QJsonValue iconId = arr[0].toObject().value("icon");
+     qDebug() << iconId;
+
+     /*
+      * https://api.openweathermap.org/data/2.5/forecast?id=588335&units=metric&appid=b7920869b08bcdf2c3477cd70a6f27c9
+      * id=588335 - Tartu
+      */
+
+     // image for icon "04n" can be downloaded there:
+     // http://openweathermap.org/img/w/04n.png
+
+
+     /* iterat over array
+     for (int i=0;i<40;i++){
+         QJsonValue iconId = arr[i].toObject().value("icon");
+         qDebug() << iconId;
+         QString qsTemp = iconId.toString();
+         ui->plainTextEdit->appendPlainText("18:00:00 -4.18 light snow");
+     }
+     */
+
+     QString qsTemp = iconId.toString();
+     ui->label_iconID->setText(qsTemp);
+
+
+
+
+
 }
 
 void MainWindow::on_pushButton_Parse_clicked()
