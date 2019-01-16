@@ -72,3 +72,18 @@ void MainWindow::replyFinished(QNetworkReply *reply)
     //ui->textBrowser->append(qsTemp);
 
 }
+
+void MainWindow::parseJson(QByteArray inputArray)
+{
+    qDebug() << "parseJson";
+    qDebug() << "inputArray is " << inputArray;
+
+}
+
+void MainWindow::on_pushButton_Parse_clicked()
+{
+  QString qsTemp = ui->plainTextEdit->toPlainText();
+  if (!qsTemp.isEmpty()){
+      parseJson(qsTemp.toLatin1());
+  }
+}
