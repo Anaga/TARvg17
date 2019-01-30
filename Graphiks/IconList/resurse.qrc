@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/small">
+        <file>icons/48x48/cloudiness.png</file>
+        <file>icons/48x48/fog.png</file>
+        <file>icons/48x48/rain.png</file>
+        <file>icons/48x48/snow.png</file>
+        <file>icons/48x48/sun.png</file>
+        <file>icons/48x48/thunderstorm.png</file>
+    </qresource>
+    <qresource prefix="/big">
+        <file>icons/256x256/cloudiness.png</file>
+        <file>icons/256x256/fog.png</file>
+        <file>icons/256x256/rain.png</file>
+        <file>icons/256x256/snow.png</file>
+        <file>icons/256x256/sun.png</file>
+        <file>icons/256x256/thunderstorm.png</file>
+    </qresource>
+</RCC>
