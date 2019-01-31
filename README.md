@@ -1,5 +1,24 @@
 # TARvg17
 
+
+
+### Homework - Forcast table    
+Start: 16.01.2019, deadline: 30.01.2018    
+Задача: Сделать приложение, которое пошлет запрос прогноза погоды на сервер, указав ИД города  
+и получив в отвте большой JSON с прогнозом на каждые 3 часа, выберет нужную информацию о времени, температуре и погоде
+вывести результаты в виде таблички.
+
+Link -  https://github.com/Anaga/TARvg17/tree/master/HomeWorksData/ForecastTable
+
+
+## Сlass work 16.01.2019 ##
+Тема урока - JSON parser
+Цель - сделать приложение, которое получит JSON погоды от сервер
+https://api.openweathermap.org/data/2.5/weather и разберет ответ
+*main new topics*
+- [ ] JSON
+
+
 ### Homework - Digital Weather    
 Start: 10.01.2019, deadline: 23.01.2018    
 Link -  https://github.com/Anaga/TARvg17/tree/master/HomeWorksData/WeatherAndSun/WeatherAndSun
