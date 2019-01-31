@@ -5,22 +5,24 @@ Start: 30.01.2018, deadline: 13.02.2018
 Задача: Сделать приложение, которое пошлет запрос текущей погоды на сервер и покажет  
 иконку из набора https://github.com/Anaga/TARvg17/tree/master/HomeWorksData/WeatherIcon/256x256
 
+Link -  https://github.com/Anaga/TARvg17/tree/master/HomeWorksData/WeatherIcon
 
 ## Сlass work 30.01.2019 ##
-Тема урока - The Qt Resource System, QLabel, QIcon
-Цель - сделать приложение, которое покажет разные иконки в QLabel
+Тема урока - The Qt Resource System, QLabel, QIcon  
+Цель - сделать приложение, которое покажет разные иконки в QLabel  
+Link -  https://github.com/Anaga/TARvg17/tree/master/Graphiks/IconList
+
 
 ## Сlass work 23.01.2019 ##
-Урок для исправления контрольной либо домашней работы.
-Домашнего задания - нет.
-
+Урок для исправления контрольной либо домашней работы.  
+Домашнего задания - нет.  
 
 
 ### Homework - Forecast table    
 Start: 16.01.2019, deadline: 30.01.2018    
 Задача: Сделать приложение, которое пошлет запрос прогноза погоды на сервер, указав ИД города  
-и получив в отвте большой JSON с прогнозом на каждые 3 часа, выберет нужную информацию о времени, температуре и погоде
-вывести результаты в виде таблички.
+и получив в отвте большой JSON с прогнозом на каждые 3 часа, выберет нужную информацию о времени, температуре и погоде 
+вывести результаты в виде таблички. 
 
 Link -  https://github.com/Anaga/TARvg17/tree/master/HomeWorksData/ForecastTable
 
