@@ -7,20 +7,20 @@
 Примеры кода с урока:
 
 ```c++
-MainWindow::MainWindow(QWidget *parent) :`
-    `QMainWindow(parent),`
-    `ui(new Ui::MainWindow)`
-`{`
-    `ui->setupUi(this);`
-    `ui->pushButton_sun->setChecked(true);` //Разрешаем кнопке быть "зажатой"
-    
-    //выставляем иконку для кнопки из ресурса small
-    `ui->pushButton_sun->setIcon(QIcon(":/small/icons/48x48/sun.png"));`  
-    
+MainWindow::MainWindow(QWidget *parent) :
+    QMainWindow(parent),
+    ui(new Ui::MainWindow)
+{
+    ui->setupUi(this);
+    ui->pushButton_sun->setChecked(true); //Разрешаем кнопке быть "зажатой"
+        
+    //выставляем иконку для кнопки из ресурса small    
+    ui->pushButton_sun->setIcon(QIcon(":/small/icons/48x48/sun.png"));
+        
     //выставляем размер иконки. Если это не сделать, то иконка сожмется под указанием 
     // Layout Manager до обычного размера кнопки.
-    `ui->pushButton_sun->setIconSize(QSize(48,48));`
-`}
+    ui->pushButton_sun->setIconSize(QSize(48,48));
+}
 ```
 
 
