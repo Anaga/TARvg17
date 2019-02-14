@@ -1,7 +1,37 @@
 # TARvg17
 
+### Homework - Animated Flag and Logo
+
+Start: 13.02.2019, deadline: 27.02.2018   
+
+
+
+## Сlass work 13.02.2019
+
+Тема урока - Animation
+
+
+
+### Homework - Flag and Logo
+
+Start: 06.02.2019, deadline: 20.02.2018   
+
+
+
+## Сlass work 06.02.2019
+
+Тема урока - The Qt Graphics System, Scene and basik graphics items: RectItem, LineItem, TextItem
+
+Цель - сделать приложение, которое рисует на сцене много прямоугольников с градиентным переходом цвета.
+
+так же работа с radioButton, измененеие цвета прямоугольника.  
+Link -  https://github.com/Anaga/TARvg17/tree/master/Graphiks/SimpleGraphiks
+
+
+
 ### Homework - Weather Icon
-Start: 30.01.2018, deadline: 13.02.2018   
+
+Start: 30.01.2019, deadline: 13.02.2019   
 Задача: Сделать приложение, которое пошлет запрос текущей погоды на сервер и покажет  
 иконку из набора https://github.com/Anaga/TARvg17/tree/master/HomeWorksData/WeatherIcon/256x256
 
@@ -19,7 +49,7 @@ Link -  https://github.com/Anaga/TARvg17/tree/master/Graphiks/IconList
 
 
 ### Homework - Forecast table    
-Start: 16.01.2019, deadline: 30.01.2018    
+Start: 16.01.2019, deadline: 30.01.2019    
 Задача: Сделать приложение, которое пошлет запрос прогноза погоды на сервер, указав ИД города  
 и получив в отвте большой JSON с прогнозом на каждые 3 часа, выберет нужную информацию о времени, температуре и погоде 
 вывести результаты в виде таблички. 
@@ -36,7 +66,7 @@ https://api.openweathermap.org/data/2.5/weather и разберет ответ
 
 
 ### Homework - Digital Weather    
-Start: 10.01.2019, deadline: 23.01.2018    
+Start: 10.01.2019, deadline: 23.01.2019    
 Link -  https://github.com/Anaga/TARvg17/tree/master/HomeWorksData/WeatherAndSun/WeatherAndSun
 
 ## Сlass work 09.01.2019 ##
