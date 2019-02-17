@@ -29,7 +29,7 @@ Start: 06.02.2019, deadline: 20.02.2018
 
 Учтите, что к лого создатели выставили довольно строгие правила по использованию.
 
-Смотрите pdf 
+Смотрите pdf https://github.com/Anaga/TARvg17/blob/master/HomeWorksData/FlagAndLogo/Estonia100_logo_usage_ENG.pdf
 
 - [ ] сделать переключатель (radioButton) за пределами QGraphicsScene, который сменит цвет лого с синего на белый, и стиль линии, которым нарисовано лого, с непрерывной линии на линию из точек
 
