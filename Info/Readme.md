@@ -2,7 +2,7 @@
 
 1. Go to https://github.com/  It support  the latest [Microsoft Edge](https://www.microsoft.com/en-us/windows/microsoft-edge), [Google Chrome](https://chrome.google.com/), or [Firefox](https://mozilla.org/firefox/).
 2. Fill in form 
-3. ![](C:\Users\aleks\Documents\GitHub\TARvg17\Info\Img\GitHubLogin1.PNG)
+3. ![](https://github.com/Anaga/TARvg17/blob/master/Info/Img/GitHubLogin1.PNG)
 4. Enter username, this can be hard to find free name
 5. Enter your Email, better if this will be a university e-mail
 6. And type a good password.
