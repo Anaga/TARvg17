@@ -4,5 +4,7 @@
         <file>img/lay.png</file>
         <file>img/sad.png</file>
         <file>img/stand.png</file>
+        <file>img/layToRigth.png</file>
     </qresource>
+    <qresource prefix="/"/>
 </RCC>
