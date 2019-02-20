@@ -24,7 +24,25 @@ MainWindow::MainWindow(QWidget *parent) :
     speedX=2;
     speedY=1;
 
-    //group = scene->createItemGroup(ellipse);
+    QList<QGraphicsItem *> itemsList;
+
+    group = scene->createItemGroup(itemsList);
+    group->addToGroup(ellipse);
+
+    group->addToGroup(
+                scene->addEllipse(
+                           150,60, 30, 20,
+                           QPen(Qt::SolidLine),
+                           QBrush(QColor(Qt::darkYellow))
+                                 )
+                     );
+    group->addToGroup(
+                scene->addEllipse(
+                           150,20, 30, 20,
+                           QPen(Qt::SolidLine),
+                           QBrush(QColor(Qt::darkYellow))
+                                 )
+                     );
 }
 
 MainWindow::~MainWindow()
@@ -35,16 +53,22 @@ MainWindow::~MainWindow()
 void MainWindow::updatePos()
 {
     qreal x, y;
-    x = ellipse->x();
-    y = ellipse->y();
+    x = group->x();
+    y = group->y();
     qDebug() << "Ellips old pos: " << x << y;
 
-    QRectF boundRec = ellipse->boundingRect(); //get borders of ellips
+    QRectF boundRec = group->boundingRect(); //get borders of ellips
     qreal wid = boundRec.width();
     qreal heg = boundRec.height();
 
-    if (x+wid >= 800) speedX=-2; // Check rigth border
-    if (x <= 0) speedX=+2;       // Check left border
+    if (x+wid >= 800) {
+        speedX=-2; // Check rigth border
+        group->setRotation(180);
+        }
+    if (x < 0) {
+        speedX=+2;       // Check left border
+        group->setRotation(180);
+    }
 
     x+=speedX;
 
@@ -54,8 +78,8 @@ void MainWindow::updatePos()
     y+=speedY;
 
     qDebug() << "Ellips new pos: " << x << y;
-    ellipse->setX(x);
-    ellipse->setY(y);
+    group->setX(x);
+    group->setY(y);
 
 }
 
