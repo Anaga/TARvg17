@@ -11,6 +11,7 @@
 #include <QPixmap>
 #include <QPainter>
 #include <QtMath>
+#include <QTimer>
 
 #include <QMainWindow>
 
@@ -28,6 +29,7 @@ public:
 
     void drowAxis();
     QPoint drawLines(QPoint start, qreal length, int maxAngel, QColor lineCol);
+    void drawSpiro(QPoint start, qreal length, int curAngel, qreal k, QColor lineCol);
     qreal radToGrad(qreal radian);
     qreal degrToRad(qreal degrees);
 

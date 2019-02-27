@@ -59,6 +59,7 @@ QPoint MainWindow::drawLines(QPoint start, qreal length, int maxAngel, QColor li
 {
     QPen normal(lineCol,1, Qt::SolidLine);
 
+    static QPoint lastPoit ;
     // Axis lines in loop
 
     int i, x,y;
@@ -70,19 +71,47 @@ QPoint MainWindow::drawLines(QPoint start, qreal length, int maxAngel, QColor li
     QString qsTemp = "alpha:%1, rad:%2, r:%3 line:";
     for (i=0;i<maxAngel;i++) {
         alpha = static_cast<double>(i);
-        rad = degrToRad(alpha);
+        rad = qDegreesToRadians(alpha);
         x= static_cast<int>(qCos(rad)*length);
         y= static_cast<int>(-qSin(rad)*length);
         delta.setX(x);
         delta.setY(y);
         end=start+delta;
+        line.setP1(lastPoit);
         line.setP2(end);
+
 
         //qDebug()<< qsTemp.arg(alpha).arg(rad).arg(length) << line;
 
         scene->addLine(line,normal);
     }
+    lastPoit = end;
     return end;
+}
+
+void MainWindow::drawSpiro(QPoint start, qreal length, int curAngel, qreal k, QColor lineCol)
+{
+    QPen normal(lineCol,1, Qt::SolidLine);
+
+    static QPointF lastPoit ;
+
+    qreal R = length;
+    qreal t = qDegreesToRadians(static_cast<qreal>(curAngel));
+    qreal l = 0.25;
+
+    qreal lk = l*k;
+    qreal fric = ((1.0-k)*t);
+
+
+    qreal newX, newY;
+    newX = start.x() +  R*( ( (1-k)*qCos(t)) + ( (lk*qCos(fric) ) ) );
+    newY = start.y() -  R*( ( (1-k)*qSin(t)) - ( (lk*qSin(fric) ) ) );
+    QPointF curPoit(newX,newY);
+    QLineF line(static_cast<QPointF>(start),curPoit);
+    //QLineF line(lastPoit,curPoit);
+    scene->addLine(line,normal);
+    lastPoit = curPoit;
+
 }
 
 qreal MainWindow::degrToRad(qreal degrees)
@@ -106,8 +135,12 @@ void MainWindow::on_horizontalSlider_Angel_valueChanged(int value)
     ui->label_Angel->setText(QString::number(rotMax));
     QPoint O(00,00);
 
-    scene->clear();
-    drowAxis();
+    //scene->clear();
+    //drowAxis();
+
+    drawSpiro(O,R,rotMax,0.5,Qt::cyan);
+    /*
     QPoint L = drawLines(O,R,rotMax, Qt::magenta);
-    drawLines(L,r,rotMax,Qt::cyan);
+    drawLines(L,r,rotMax*2,Qt::cyan);
+    */
 }
