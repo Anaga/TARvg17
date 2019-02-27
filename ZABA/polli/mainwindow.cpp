@@ -105,6 +105,10 @@ void MainWindow::drawSpiro(QPoint start, qreal length, int curAngel, qreal k, QC
 
     qreal lk = l*k;
     qreal fric = ((1.0-k)*t);
+    // links: https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D1%84_(%D0%B8%D0%B3%D1%80%D1%83%D1%88%D0%BA%D0%B0)
+    // https://en.wikipedia.org/wiki/Spirograph
+    // Mathematical basis
+    // https://en.wikipedia.org/wiki/Spirograph#Mathematical_basis
 
 
     qreal newX, newY;
