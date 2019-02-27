@@ -23,8 +23,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->label_Angel->setText("0°");
 
 
-    R = 150.0;
+    R = 250.0;
     ui->label_Length->setText("150 pxt");
+
+    QTimer *myT = new QTimer(this);
+    connect(myT, SIGNAL(timeout()), this, SLOT(tick()));
+    myT->start(5);
 
 }
 
@@ -97,7 +101,7 @@ void MainWindow::drawSpiro(QPoint start, qreal length, int curAngel, qreal k, QC
 
     qreal R = length;
     qreal t = qDegreesToRadians(static_cast<qreal>(curAngel));
-    qreal l = 0.25;
+    qreal l = 1.5;
 
     qreal lk = l*k;
     qreal fric = ((1.0-k)*t);
@@ -107,8 +111,8 @@ void MainWindow::drawSpiro(QPoint start, qreal length, int curAngel, qreal k, QC
     newX = start.x() +  R*( ( (1-k)*qCos(t)) + ( (lk*qCos(fric) ) ) );
     newY = start.y() -  R*( ( (1-k)*qSin(t)) - ( (lk*qSin(fric) ) ) );
     QPointF curPoit(newX,newY);
-    QLineF line(static_cast<QPointF>(start),curPoit);
-    //QLineF line(lastPoit,curPoit);
+    //QLineF line(static_cast<QPointF>(start),curPoit);
+    QLineF line(lastPoit,curPoit);
     scene->addLine(line,normal);
     lastPoit = curPoit;
 
@@ -117,6 +121,17 @@ void MainWindow::drawSpiro(QPoint start, qreal length, int curAngel, qreal k, QC
 qreal MainWindow::degrToRad(qreal degrees)
 {
     return ((degrees*M_PI)/180.0);
+}
+
+void MainWindow::tick()
+{
+    QPoint O(00,00);
+    static int curAngel = 0;
+    curAngel++;
+   // qDebug() << "Tick, curAngel is " << curAngel;
+    //drawSpiro(O,R,curAngel, sqrt(2.0)*0.1 ,Qt::cyan);
+    drawSpiro(O,R,curAngel, M_SQRT1_2 ,Qt::cyan);
+
 }
 
 
@@ -138,7 +153,7 @@ void MainWindow::on_horizontalSlider_Angel_valueChanged(int value)
     //scene->clear();
     //drowAxis();
 
-    drawSpiro(O,R,rotMax,0.5,Qt::cyan);
+    drawSpiro(O,R,rotMax,5,Qt::cyan);
     /*
     QPoint L = drawLines(O,R,rotMax, Qt::magenta);
     drawLines(L,r,rotMax*2,Qt::cyan);

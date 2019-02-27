@@ -34,10 +34,11 @@ public:
     qreal degrToRad(qreal degrees);
 
 
+
 private slots:
     void on_horizontalSlider_Length_valueChanged(int value);
-
     void on_horizontalSlider_Angel_valueChanged(int value);
+    void tick();
 
 private:
     Ui::MainWindow *ui;
