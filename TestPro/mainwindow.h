@@ -15,6 +15,10 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    void summ();
+
+    //int summ();
+
 private:
     Ui::MainWindow *ui;
 };
