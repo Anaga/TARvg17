@@ -34,11 +34,11 @@ https://books.google.ie/books?id=J4N0DwAAQBAJ&lpg=PA283&ots=d1tCBgGJ8k&dq=qt%20t
 
 Ожидаемый результат:
 
-![](C:\Users\Aleksandr Boborev\Documents\Git\IMG\HW_Mouse1.png)
+![](https://github.com/Anaga/TARvg17/blob/master/HomeWorksData/RotateMouse/HW_Mouse1.png)
 
-![](C:\Users\Aleksandr Boborev\Documents\Git\IMG\HW_Mouse2.png)
+![](https://github.com/Anaga/TARvg17/blob/master/HomeWorksData/RotateMouse/HW_Mouse2.png)
 
-![](C:\Users\Aleksandr Boborev\Documents\Git\IMG\HW_Mouse3.png)
+![](https://github.com/Anaga/TARvg17/blob/master/HomeWorksData/RotateMouse/HW_Mouse3.png)
 
 
 
