@@ -1,5 +1,61 @@
 # TARvg17
 
+### Homework - Animat Class work
+
+Start: 27.02.2019, deadline: 13.03.2018   
+
+Продолжение работы "веера" - добавьте анимацию для открытия / закрытия веера. 
+
+
+
+## Сlass work 27.02.2019
+
+Тема урока - Qt Math, and qSin, qCos
+
+Цель - сделать приложение, которое рисует оси координат, и рисует "веер" из прямых линий от центра координат на длину радиуса, по одной линни на один градус угла, что получаем из спинбокса.
+
+Link: https://github.com/Anaga/TARvg17/tree/master/Graphiks/Spirograph
+
+
+
+### Homework - Rotate Mouse
+
+Start: 20.02.2019, deadline: 13.03.2018   
+
+Ваша задача -  сделать приложение, которое разместит по центру экрана одну их картинок мышей, что вы можете найти тут: https://github.com/Anaga/TARvg17/tree/master/Graphiks/Mouse/Hand-drawn-mice-collection
+
+А также два слайдера, один из которых отвечает за вращения мыши вокруг своего "цента тяжести" - середину картинки, а второй слайдер отвечает за "скос" картинки (shear)
+
+Про трансформации можно почитать тут:
+
+https://books.google.ie/books?id=J4N0DwAAQBAJ&lpg=PA283&ots=d1tCBgGJ8k&dq=qt%20transform%20shear&hl=ru&pg=PA282#v=onepage&q=qt%20transform%20shear&f=false
+
+
+
+Ожидаемый результат:
+
+![](https://github.com/Anaga/TARvg17/blob/master/HomeWorksData/RotateMouse/HW_Mouse1.png)
+
+![](https://github.com/Anaga/TARvg17/blob/master/HomeWorksData/RotateMouse/HW_Mouse2.png)
+
+![](https://github.com/Anaga/TARvg17/blob/master/HomeWorksData/RotateMouse/HW_Mouse3.png)
+
+
+
+
+
+## Сlass work 20.02.2019
+
+Тема урока - Qt bitmap and mouse click point
+
+Цель - познакоимтся с тем, как получить координаты щелчка мыши, и с тем, как добавить картинку из файла на сцену.
+
+Link: https://github.com/Anaga/TARvg17/tree/master/Graphiks/Mouse/Mouse2
+
+
+
+
+
 ### Homework - Animated Flag and Logo
 
 Start: 13.02.2019, deadline: 27.02.2018   
