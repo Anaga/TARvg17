@@ -42,11 +42,48 @@ void MainWindow::on_pushButton_Connect_clicked()
 
 void MainWindow::on_pushButton_Send_clicked()
 {
-    QSqlQuery query("select * from books");
+    QString qsTemp = ui->lineEdit->text();
+    QSqlQuery query(qsTemp);
+    //QSqlQuery query("select * from books");
     ui->textBrowser->append("Books: ");
     while (query.next()) {
         QString book = query.value(1).toString();
         ui->textBrowser->append(book);
     }
-
 }
+
+void MainWindow::on_pushButton_clicked()
+{
+    ui->textBrowser->clear();
+    QStringList authorsList;
+    QSqlQuery query("select name from authors");
+    while (query.next()) {
+        QString author = query.value(0).toString();
+        authorsList.append(author);
+    }
+    qDebug() << authorsList;
+
+    QStringList genresList;
+    query.prepare("select name from genres");
+    query.exec();
+    while (query.next()) {
+        QString gen = query.value(0).toString();
+        genresList.append(gen);
+    }
+    qDebug() << genresList;
+
+    query.exec("select title,author,genre  from books");
+    QString title, author, genre;
+    int authId, genId;
+    while (query.next()) {
+        title = query.value(0).toString();
+        authId = query.value(1).toInt();
+        genId = query.value(2).toInt();
+
+        author = authorsList.at(authId-1);
+        genre = genresList.at(genId-1);
+        QString qsTemp = title + " | " + author + " | "+genre;
+        ui->textBrowser->append(qsTemp);
+    }
+}
+
