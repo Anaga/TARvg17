@@ -5,7 +5,7 @@ Currency::Currency(const int val)
     m_val = static_cast<qint16>(val*100);
 }
 
-Currency::Currency(const double val) // 0.0155984
+Currency::Currency(const double val)
 {
     m_val = static_cast<qint16>(val*100);
 }
