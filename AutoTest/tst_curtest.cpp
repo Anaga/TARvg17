@@ -15,6 +15,7 @@ private slots:
     void test_CurConstuctor();
     void test_case1();
     void test_CurSumma();
+    void test_CurSumma_data();
 
 };
 
@@ -58,12 +59,26 @@ void CurTest::test_CurConstuctor()
 
 void CurTest::test_CurSumma()
 {
-    Currency tenEuro(10);
-    Currency someNegSents = -0.34;
+    QFETCH(double, first);
+    QFETCH(double, second);
+    QFETCH(QString, result);
 
-    Currency total = tenEuro+someNegSents;
+    Currency currA(first);
+    Currency currB(second);
+
+    Currency total = currA+currB;
     qDebug() << total;
-    QVERIFY(total.toPrint() == "9.66");
+    QVERIFY(total.toPrint() == result);
+}
+
+void CurTest::test_CurSumma_data()
+{
+    QTest::addColumn<double>("first");
+    QTest::addColumn<double>("second");
+    QTest::addColumn<QString>("result");
+
+    QTest::newRow("tenEuro + someNegSents") << 10.0 << -0.34 << "9.66";
+    QTest::newRow("tenEuro + someSents")    << 10.0 <<  0.34 << "10.34";
 }
 
 void CurTest::test_case1()
