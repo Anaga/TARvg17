@@ -7,7 +7,11 @@
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QSqlError>
+#include <QSqlRecord>
+#include <QSqlResult>
 
+#include <QTableWidget>
+#include <QTableWidgetItem>
 
 #include <QMainWindow>
 
@@ -22,7 +26,7 @@ class MainWindow : public QMainWindow
     QSqlDatabase db;
 
 public:
-    explicit MainWindow(QWidget *parent = 0);
+    explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
 private slots:
@@ -31,6 +35,10 @@ private slots:
     void on_pushButton_Send_clicked();
 
     void on_pushButton_clicked();
+
+    void on_pushButton_GetAuthor_clicked();
+
+    void on_pushButton_2_clicked();
 
 private:
     Ui::MainWindow *ui;

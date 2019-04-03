@@ -15,7 +15,7 @@ MainWindow::MainWindow(QWidget *parent) :
     }
 
     db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("bookshelf.sql");
+    db.setDatabaseName("bookshelf_01.sql");
 
 }
 
@@ -87,3 +87,27 @@ void MainWindow::on_pushButton_clicked()
     }
 }
 
+
+void MainWindow::on_pushButton_GetAuthor_clicked()
+{
+    QStringList authorsList;
+    QSqlQuery query("select name from authors");
+    while (query.next()) {
+        QString author = query.value(0).toString();
+        authorsList.append(author);
+    }
+    qDebug() << authorsList;
+
+    ui->listWidget->addItems(authorsList);
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    auto rec = db.record("books");
+    qDebug() << rec;
+    ui->tableWidget->setColumnCount(6);
+    QTableWidgetItem *newItem = new QTableWidgetItem(tr("%1").arg(pow(row, column+1)));
+
+    ui->tableWidget->setItem()
+    //ui->tableWidget->setHorizontalHeader();
+}
