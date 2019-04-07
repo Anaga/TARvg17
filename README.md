@@ -1,5 +1,35 @@
 # TARvg17
 
+```
+
+
+Оценка за год                               :  
+Третая четверть:                            :        
+
+Список домашних работ после контрольной:  
+27.03.2019 - Write a feedback               :   
+20.03.2019 - Add 10 books to bookshelf db   :  
+13.03.2019 - Second MyWorker class          :     
+
+Оценка за контрольную                       :  
+Список домашних работ до контрольной:  
+27.02.2019 - Spirograph                     :  
+20.02.2019 - Mouse rotation and shear       :  
+13.02.2019 - Animated Flag and Logo         :  
+06.02.2019 - Flag and Logo                  :   
+30.01.2019 - Weather Icon                   :   
+16.01.2019 - Forecast table                 :  
+09.01.2019 - Digital Weather                :  
+```
+
+
+
+## Сlass test 06.03.2019
+
+Link https://github.com/Anaga/GUI_ClassTest
+
+
+
 ### Homework - Animat Class work
 
 Start: 27.02.2019, deadline: 13.03.2018   
@@ -141,7 +171,7 @@ https://api.openweathermap.org/data/2.5/weather и разберет ответ
 
 
 ### Homework - Digital Weather    
-Start: 10.01.2019, deadline: 23.01.2019    
+Start: 09.01.2019, deadline: 23.01.2019    
 Link -  https://github.com/Anaga/TARvg17/tree/master/HomeWorksData/WeatherAndSun/WeatherAndSun
 
 ## Сlass work 09.01.2019 ##
